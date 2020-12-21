@@ -16,7 +16,7 @@ Kelompok T06
 ![CIDR Topologi](https://user-images.githubusercontent.com/61286109/102782210-8c86d200-43cb-11eb-8316-12f8969fb196.png) <br>
 Hasil yang didapat adalah <b>Netmask /22</b> untuk subnet besar topologi diatas.
 - Pembagian IP dengan pohon berdasarkan penggabungan subnet yang telah dilakukan.
-![Tree CIDR Modul5](https://user-images.githubusercontent.com/61286109/102782301-b3dd9f00-43cb-11eb-94af-7acd96894822.png) <br>
+![Tree CIDR Modul5](https://user-images.githubusercontent.com/61286109/102784642-43388180-43cf-11eb-8c7a-9bc348e96a5f.png) <br>
 - Dari pohon tersebut akan mendapat pembagian IP sebagai berikut. <br>
 ![Pembagian IP](https://user-images.githubusercontent.com/61286109/102783285-4468af00-43cd-11eb-8fca-1ebc1157ef22.PNG) <br>
 
