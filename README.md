@@ -10,11 +10,11 @@ Kelompok T06
 ## TOPOLOGI UML <br>
 ![Topologi Modul 5](https://user-images.githubusercontent.com/61286109/102757895-8d583d80-43a4-11eb-971a-50f803ca820a.PNG) <br>
 ## PENYELESAIAN <br>
-### Menggunakan Metode VLSM
+### Menggunakan Metode CIDR
 #### Subnetting (Pembagian IP) <br>
-- Menentukan jumlah subnet yang ada pada topologi. <br>
-![Subnet Topologi Modul 5](https://user-images.githubusercontent.com/61286109/102758704-b927f300-43a5-11eb-9548-0c1305a6ba52.png) <br>
-- Menentukan jumlah alamat IP yang dibutuhkan oleh tiap subnet dan lakukan labelling netmask berdasarkan jumlah IP yang dibutuhkan. <br>
-![Labelling Netmask](https://user-images.githubusercontent.com/61286109/102759054-2d629680-43a6-11eb-9880-0a931f9a8d5f.PNG) <br>
-Berdasarkan total IP dan netmask yang dibutuhkan, maka kita dapat menggunakan netmask /23 untuk memberikan pengalamatan IP pada subnet.
-- Hitung pembagian IP dan Lakukan subnetting dengan menggunakan pohon tersebut untuk pembagian IP sesuai dengan kebutuhan masing-masing subnet yang ada. <br>
+- Menentukan subnet yang ada dalam topologi dan lakukan labelling netmask terhadap masing-masing subnet kemudian menggabungkan subnet-subnet sampai menjadi subnet besar. <br>
+![CIDR Topologi](https://user-images.githubusercontent.com/61286109/102782210-8c86d200-43cb-11eb-8316-12f8969fb196.png) <br>
+Hasil yang didapat adalah Netmask /16 untuk subnet besar topologi diatas.
+- Pembagian IP dengan pohon berdasarkan penggabungan subnet yang telah dilakukan.
+![Tree CIDR Modul5](https://user-images.githubusercontent.com/61286109/102782301-b3dd9f00-43cb-11eb-94af-7acd96894822.png) <br>
+- Dari pohon tersebut akan mendapat pembagian IP sebagai berikut.
