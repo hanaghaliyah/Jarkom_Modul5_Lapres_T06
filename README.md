@@ -14,7 +14,7 @@ Kelompok T06
 #### Subnetting (Pembagian IP) <br>
 - Menentukan subnet yang ada dalam topologi dan lakukan labelling netmask terhadap masing-masing subnet kemudian menggabungkan subnet-subnet sampai menjadi subnet besar. <br>
 ![CIDR Topologi](https://user-images.githubusercontent.com/61286109/102782210-8c86d200-43cb-11eb-8316-12f8969fb196.png) <br>
-Hasil yang didapat adalah Netmask /16 untuk subnet besar topologi diatas.
+Hasil yang didapat adalah Netmask /22 untuk subnet besar topologi diatas.
 - Pembagian IP dengan pohon berdasarkan penggabungan subnet yang telah dilakukan.
 ![Tree CIDR Modul5](https://user-images.githubusercontent.com/61286109/102782301-b3dd9f00-43cb-11eb-94af-7acd96894822.png) <br>
 - Dari pohon tersebut akan mendapat pembagian IP sebagai berikut.
