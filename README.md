@@ -54,5 +54,26 @@ Hasil yang didapat adalah <b>Netmask /22</b> untuk subnet besar topologi diatas.
 ![Pembagian IP](https://user-images.githubusercontent.com/61286109/102786622-657fce80-43d2-11eb-9fcc-d6e9866b04ca.PNG) <br>
 
 #### Konfigurasi Tiap UML
-- Pertama, membuat file `topologi.sh`.
+1. Pertama, membuat file `topologi.sh`.
 ![NanoTopologi](https://user-images.githubusercontent.com/61286109/102784082-73cbeb80-43ce-11eb-89e5-5bfb656220a9.PNG) <br>
+2. Pada semua UML Router, ke file `nano /etc/sysctl.conf` kemudian uncomment `net.ipv4.ip_forward=1` dan aktifkan dengan syntax `sysctl -p`. <br>
+3. Lakukan setting interface pada semua UML di `nano /etc/network/interfaces` dan di restart dengan syntax `service networking restart`. <br>
+- ROUTER SURABAYA <br>
+![iface surabaya](https://user-images.githubusercontent.com/61286109/102826860-1064ac80-4414-11eb-86dc-7c5a0ffeeb4b.PNG) <br>
+- ROUTER KEDIRI <br>
+![iface kediri](https://user-images.githubusercontent.com/61286109/102826853-0d69bc00-4414-11eb-92cf-ad9fc9490240.PNG) <br>
+- ROUTER BATU <br>
+![iface batu](https://user-images.githubusercontent.com/61286109/102826849-0b076200-4414-11eb-9c59-e20ba3aa504f.PNG) <br>
+- SERVER MADIUN <br>
+![iface madiun](https://user-images.githubusercontent.com/61286109/102826854-0e025280-4414-11eb-86aa-4edcd9ba5d04.PNG) <br>
+- SERVER PROBOLINGGO <br>
+![iface probolinggo](https://user-images.githubusercontent.com/61286109/102826858-0f337f80-4414-11eb-835d-8c48f2292a8f.PNG) <br>
+- SERVER MALANG <br>
+![iface malang](https://user-images.githubusercontent.com/61286109/102826855-0e025280-4414-11eb-99d3-ecab6d9f06a6.PNG) <br>
+- SERVER MOJOKERTO <br>
+![iface mojokerto](https://user-images.githubusercontent.com/61286109/102826857-0e9ae900-4414-11eb-8f4e-2465a7cf0df6.PNG) <br>
+- KLIEN GRESIK <br>
+![iface gresik](https://user-images.githubusercontent.com/61286109/102826852-0cd12580-4414-11eb-8710-1234c41f2c70.PNG) <br>
+- KLIEN SIDOARJO <br>
+![iface sidoarjo](https://user-images.githubusercontent.com/61286109/102826859-0fcc1600-4414-11eb-9b38-f57858a26aa6.PNG) <br>
+
