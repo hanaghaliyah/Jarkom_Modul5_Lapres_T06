@@ -18,7 +18,7 @@ Hasil yang didapat adalah <b>Netmask /22</b> untuk subnet besar topologi diatas.
 - Pembagian IP dengan pohon berdasarkan penggabungan subnet yang telah dilakukan.
 ![Tree CIDR Modul5](https://user-images.githubusercontent.com/61286109/102784642-43388180-43cf-11eb-8c7a-9bc348e96a5f.png) <br>
 - Dari pohon tersebut akan mendapat pembagian IP sebagai berikut. <br>
-![Pembagian IP](https://user-images.githubusercontent.com/61286109/102786622-657fce80-43d2-11eb-9fcc-d6e9866b04ca.PNG)) <br>
+![Pembagian IP](https://user-images.githubusercontent.com/61286109/102786622-657fce80-43d2-11eb-9fcc-d6e9866b04ca.PNG) <br>
 
 #### Konfigurasi Tiap UML
 - Pertama, membuat file `topologi.sh`.
