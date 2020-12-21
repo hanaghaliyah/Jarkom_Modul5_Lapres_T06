@@ -16,3 +16,5 @@ Kelompok T06
 ![Subnet Topologi Modul 5](https://user-images.githubusercontent.com/61286109/102758704-b927f300-43a5-11eb-9548-0c1305a6ba52.png) <br>
 - Menentukan jumlah alamat IP yang dibutuhkan oleh tiap subnet dan lakukan labelling netmask berdasarkan jumlah IP yang dibutuhkan. <br>
 ![Labelling Netmask](https://user-images.githubusercontent.com/61286109/102759054-2d629680-43a6-11eb-9880-0a931f9a8d5f.PNG) <br>
+Berdasarkan total IP dan netmask yang dibutuhkan, maka kita dapat menggunakan netmask /23 untuk memberikan pengalamatan IP pada subnet.
+- Hitung pembagian IP dan Lakukan subnetting dengan menggunakan pohon tersebut untuk pembagian IP sesuai dengan kebutuhan masing-masing subnet yang ada. <br>
