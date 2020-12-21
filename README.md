@@ -11,6 +11,8 @@ Kelompok T06
 ![Topologi Modul 5](https://user-images.githubusercontent.com/61286109/102757895-8d583d80-43a4-11eb-971a-50f803ca820a.PNG) <br>
 ## PENYELESAIAN <br>
 ### Menggunakan Metode VLSM
-- Subnetting (Pembagian IP) <br>
-![Subnet Topologi Modul 5](https://user-images.githubusercontent.com/61286109/102758245-0bb4df80-43a5-11eb-92f4-c6438c46e4ff.png) <br>
-
+#### Subnetting (Pembagian IP) <br>
+- Menentukan jumlah subnet yang ada pada topologi. <br>
+![Subnet Topologi Modul 5](https://user-images.githubusercontent.com/61286109/102758704-b927f300-43a5-11eb-9548-0c1305a6ba52.png) <br>
+- Menentukan jumlah alamat IP yang dibutuhkan oleh tiap subnet dan lakukan labelling netmask berdasarkan jumlah IP yang dibutuhkan. <br>
+![Labelling Netmask](https://user-images.githubusercontent.com/61286109/102759054-2d629680-43a6-11eb-9880-0a931f9a8d5f.PNG) <br>
