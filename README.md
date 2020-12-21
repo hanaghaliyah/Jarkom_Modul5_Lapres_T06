@@ -76,4 +76,6 @@ Hasil yang didapat adalah <b>Netmask /22</b> untuk subnet besar topologi diatas.
 ![iface gresik](https://user-images.githubusercontent.com/61286109/102826852-0cd12580-4414-11eb-8710-1234c41f2c70.PNG) <br>
 - KLIEN SIDOARJO <br>
 ![iface sidoarjo](https://user-images.githubusercontent.com/61286109/102826859-0fcc1600-4414-11eb-9b38-f57858a26aa6.PNG) <br>
-
+4. Lakukan Routing terhadap Router Surabaya dengan membuat file dengan `nano routing.sh` untuk memudahkan kita karena pada saat setiap UML di restart maka routenya ke reset. Untuk menjalankannya ketik syntax `source routing.sh`.
+- ROUTING SURABAYA <br>
+![routing surabaya](https://user-images.githubusercontent.com/61286109/102829339-76076780-4419-11eb-8381-70f6c529541d.PNG) <br>
