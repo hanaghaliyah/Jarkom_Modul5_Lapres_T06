@@ -1,4 +1,3 @@
-![iface madiun](https://user-images.githubusercontent.com/61286109/102902989-4badbc80-44a2-11eb-972d-58845f439e48.PNG)# Jarkom_Modul5_Lapres_T06
 <b> Laporan Resmi Praktikum Jaringan Komputer </b> <br>
 Modul 5 - FIREWALL <br>
 Kelompok T06
