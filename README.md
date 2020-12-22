@@ -69,9 +69,9 @@ Hasil yang didapat adalah <b>Netmask /21</b> untuk subnet besar topologi diatas.
 - SERVER PROBOLINGGO <br>
 ![iface probolinggo](https://user-images.githubusercontent.com/61286109/102826858-0f337f80-4414-11eb-835d-8c48f2292a8f.PNG) <br>
 - SERVER MALANG <br>
-![iface malang](https://user-images.githubusercontent.com/61286109/102826855-0e025280-4414-11eb-99d3-ecab6d9f06a6.PNG) <br>
+![iface malang](https://user-images.githubusercontent.com/61286109/102900739-4ef37900-449f-11eb-9809-13a3a6b25ac0.PNG) <br>
 - SERVER MOJOKERTO <br>
-![iface mojokerto](https://user-images.githubusercontent.com/61286109/102826857-0e9ae900-4414-11eb-8f4e-2465a7cf0df6.PNG) <br>
+![iface mojokerto](https://user-images.githubusercontent.com/61286109/102900727-4bf88880-449f-11eb-8bfb-4095fa168432.PNG) <br>
 - KLIEN GRESIK <br>
 ![iface gresik](https://user-images.githubusercontent.com/61286109/102826852-0cd12580-4414-11eb-8710-1234c41f2c70.PNG) <br>
 - KLIEN SIDOARJO <br>
