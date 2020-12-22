@@ -1,4 +1,4 @@
-# Jarkom_Modul5_Lapres_T06
+![iface madiun](https://user-images.githubusercontent.com/61286109/102902989-4badbc80-44a2-11eb-972d-58845f439e48.PNG)# Jarkom_Modul5_Lapres_T06
 <b> Laporan Resmi Praktikum Jaringan Komputer </b> <br>
 Modul 5 - FIREWALL <br>
 Kelompok T06
@@ -65,9 +65,9 @@ Hasil yang didapat adalah <b>Netmask /21</b> untuk subnet besar topologi diatas.
 - ROUTER BATU <br>
 ![iface batu](https://user-images.githubusercontent.com/61286109/102899633-d0e2a280-449d-11eb-95ed-e3ea0a41ca32.PNG) <br>
 - SERVER MADIUN <br>
-![iface madiun](https://user-images.githubusercontent.com/61286109/102826854-0e025280-4414-11eb-86aa-4edcd9ba5d04.PNG) <br>
+![iface madiun](https://user-images.githubusercontent.com/61286109/102902989-4badbc80-44a2-11eb-972d-58845f439e48.PNG) <br>
 - SERVER PROBOLINGGO <br>
-![iface probolinggo](https://user-images.githubusercontent.com/61286109/102826858-0f337f80-4414-11eb-835d-8c48f2292a8f.PNG) <br>
+![iface probolinggo](https://user-images.githubusercontent.com/61286109/102902985-494b6280-44a2-11eb-9da6-de197f677452.PNG) <br>
 - SERVER MALANG <br>
 ![iface malang](https://user-images.githubusercontent.com/61286109/102900739-4ef37900-449f-11eb-9809-13a3a6b25ac0.PNG) <br>
 - SERVER MOJOKERTO <br>
