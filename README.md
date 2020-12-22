@@ -59,11 +59,11 @@ Hasil yang didapat adalah <b>Netmask /21</b> untuk subnet besar topologi diatas.
 2. Pada semua UML Router, ke file `nano /etc/sysctl.conf` kemudian uncomment `net.ipv4.ip_forward=1` dan aktifkan dengan syntax `sysctl -p`. <br>
 3. Lakukan setting interface pada semua UML di `nano /etc/network/interfaces` dan di restart dengan syntax `service networking restart`. <br>
 - ROUTER SURABAYA <br>
-![iface surabaya](https://user-images.githubusercontent.com/61286109/102826860-1064ac80-4414-11eb-86dc-7c5a0ffeeb4b.PNG) <br>
+![iface kediri](https://user-images.githubusercontent.com/61286109/102899625-ce804880-449d-11eb-882b-4df24f2df1e6.PNG) <br>
 - ROUTER KEDIRI <br>
 ![iface kediri](https://user-images.githubusercontent.com/61286109/102826853-0d69bc00-4414-11eb-92cf-ad9fc9490240.PNG) <br>
 - ROUTER BATU <br>
-![iface batu](https://user-images.githubusercontent.com/61286109/102826849-0b076200-4414-11eb-9c59-e20ba3aa504f.PNG) <br>
+![iface batu](https://user-images.githubusercontent.com/61286109/102899633-d0e2a280-449d-11eb-95ed-e3ea0a41ca32.PNG) <br>
 - SERVER MADIUN <br>
 ![iface madiun](https://user-images.githubusercontent.com/61286109/102826854-0e025280-4414-11eb-86aa-4edcd9ba5d04.PNG) <br>
 - SERVER PROBOLINGGO <br>
