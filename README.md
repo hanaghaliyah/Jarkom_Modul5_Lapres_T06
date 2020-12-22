@@ -49,7 +49,7 @@ Bibah berterima kasih kepada kalian karena telah mau membantunya. Bibah juga men
 ![SubnetTopologi Modul 5](https://user-images.githubusercontent.com/61286109/102895716-c7eed280-4497-11eb-9344-008e4d53366b.png) <br>
 Hasil yang didapat adalah <b>Netmask /21</b> untuk subnet besar topologi diatas.
 - Pembagian IP dengan pohon berdasarkan penggabungan subnet yang telah dilakukan.
-![TreeCIDR Modul5](https://user-images.githubusercontent.com/61286109/102895878-1bf9b700-4498-11eb-8c2c-22d288db8cf6.png) <br>
+![TreeCIDR Modul5](https://user-images.githubusercontent.com/61286109/102901541-58311580-44a0-11eb-9e8e-62e186f6eda4.png) <br>
 - Dari pohon tersebut akan mendapat pembagian IP sebagai berikut. <br>
 ![Pembagian IP](https://user-images.githubusercontent.com/61286109/102895979-3fbcfd00-4498-11eb-8706-a60ed977048d.PNG) <br>
 
