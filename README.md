@@ -47,9 +47,9 @@ Bibah berterima kasih kepada kalian karena telah mau membantunya. Bibah juga men
 #### Subnetting (Pembagian IP) <br>
 - Menentukan subnet yang ada dalam topologi dan lakukan labelling netmask terhadap masing-masing subnet kemudian menggabungkan subnet-subnet sampai menjadi subnet besar. <br>
 ![SubnetTopologi Modul 5](https://user-images.githubusercontent.com/61286109/102895716-c7eed280-4497-11eb-9344-008e4d53366b.png) <br>
-Hasil yang didapat adalah <b>Netmask /22</b> untuk subnet besar topologi diatas.
+Hasil yang didapat adalah <b>Netmask /21</b> untuk subnet besar topologi diatas.
 - Pembagian IP dengan pohon berdasarkan penggabungan subnet yang telah dilakukan.
-![Tree CIDR Modul5](https://user-images.githubusercontent.com/61286109/102798176-4e95a800-43e3-11eb-9ed1-dfc4c61958e1.png) <br>
+![TreeCIDR Modul5](https://user-images.githubusercontent.com/61286109/102895878-1bf9b700-4498-11eb-8c2c-22d288db8cf6.png) <br>
 - Dari pohon tersebut akan mendapat pembagian IP sebagai berikut. <br>
 ![Pembagian IP](https://user-images.githubusercontent.com/61286109/102786622-657fce80-43d2-11eb-9fcc-d6e9866b04ca.PNG) <br>
 
