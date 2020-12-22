@@ -46,7 +46,7 @@ Bibah berterima kasih kepada kalian karena telah mau membantunya. Bibah juga men
 ### Menggunakan Metode CIDR
 #### Subnetting (Pembagian IP) <br>
 - Menentukan subnet yang ada dalam topologi dan lakukan labelling netmask terhadap masing-masing subnet kemudian menggabungkan subnet-subnet sampai menjadi subnet besar. <br>
-![CIDR Topologi](https://user-images.githubusercontent.com/61286109/102782210-8c86d200-43cb-11eb-8316-12f8969fb196.png) <br>
+![SubnetTopologi Modul 5](https://user-images.githubusercontent.com/61286109/102895716-c7eed280-4497-11eb-9344-008e4d53366b.png) <br>
 Hasil yang didapat adalah <b>Netmask /22</b> untuk subnet besar topologi diatas.
 - Pembagian IP dengan pohon berdasarkan penggabungan subnet yang telah dilakukan.
 ![Tree CIDR Modul5](https://user-images.githubusercontent.com/61286109/102798176-4e95a800-43e3-11eb-9ed1-dfc4c61958e1.png) <br>
