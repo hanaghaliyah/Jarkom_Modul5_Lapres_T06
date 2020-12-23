@@ -80,3 +80,21 @@ Hasil yang didapat adalah <b>Netmask /21</b> untuk subnet besar topologi diatas.
 ![routing surabaya](https://user-images.githubusercontent.com/61286109/102912675-47889b80-44b0-11eb-9f89-5b2f4a1d4440.PNG) <br>
 - ROUTING KEDIRI <br>
 ![routing kediri](https://user-images.githubusercontent.com/61286109/102912665-45bed800-44b0-11eb-9509-163626b42c1c.PNG) <br>
+
+5. Install DHCP server, DNS server dan Web server
+- MALANG (DNS Server)
+<img width="364" alt="dns server" src="https://user-images.githubusercontent.com/26424136/102977306-63825080-4535-11eb-9e09-a4fd4849cc57.PNG">
+- MOJOKERTO (DHCP Server)
+<img width="369" alt="dhcp server" src="https://user-images.githubusercontent.com/26424136/102977301-61b88d00-4535-11eb-903e-588d5cc6c906.PNG">
+- MADIUN dan PROBOLINGGO (Web Server)
+BELUM DI SS
+
+
+#### NOMOR 1
+<img width="417" alt="no1" src="https://user-images.githubusercontent.com/26424136/102977307-641ae700-4535-11eb-8c43-1c8c10d1a930.PNG">
+
+#### NOMOR 2
+<img width="364" alt="no2" src="https://user-images.githubusercontent.com/26424136/102977308-64b37d80-4535-11eb-8436-313a6d83541e.PNG">
+
+#### NOMOR 3
+<img width="398" alt="no3" src="https://user-images.githubusercontent.com/26424136/102977310-654c1400-4535-11eb-9bbb-9050319a4293.PNG">
