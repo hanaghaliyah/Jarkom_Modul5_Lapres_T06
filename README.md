@@ -91,10 +91,13 @@ BELUM DI SS
 
 
 #### NOMOR 1
+10.151.72.90 merupakan ip eth0 SURABAYA <br>
 <img width="417" alt="no1" src="https://user-images.githubusercontent.com/26424136/102977307-641ae700-4535-11eb-8c43-1c8c10d1a930.PNG">
 
 #### NOMOR 2
+10.151.73.176 merupakan IP DMZ <br>
 <img width="364" alt="no2" src="https://user-images.githubusercontent.com/26424136/102977308-64b37d80-4535-11eb-8436-313a6d83541e.PNG">
 
 #### NOMOR 3
+UML Malang dan Mojokerto <br>
 <img width="398" alt="no3" src="https://user-images.githubusercontent.com/26424136/102977310-654c1400-4535-11eb-9bbb-9050319a4293.PNG">
