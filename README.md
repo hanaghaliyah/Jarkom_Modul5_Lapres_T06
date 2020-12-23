@@ -82,11 +82,11 @@ Hasil yang didapat adalah <b>Netmask /21</b> untuk subnet besar topologi diatas.
 ![routing kediri](https://user-images.githubusercontent.com/61286109/102912665-45bed800-44b0-11eb-9509-163626b42c1c.PNG) <br>
 
 5. Install DHCP server, DNS server dan Web server
-- MALANG (DNS Server)
+- MALANG (DNS Server) <br>
 <img width="364" alt="dns server" src="https://user-images.githubusercontent.com/26424136/102977306-63825080-4535-11eb-9e09-a4fd4849cc57.PNG"> <br>
-- MOJOKERTO (DHCP Server)
+- MOJOKERTO (DHCP Server) <br>
 <img width="369" alt="dhcp server" src="https://user-images.githubusercontent.com/26424136/102977301-61b88d00-4535-11eb-903e-588d5cc6c906.PNG"> <br>
-- MADIUN dan PROBOLINGGO (Web Server)
+- MADIUN dan PROBOLINGGO (Web Server) <br>
 BELUM DI SS
 
 
