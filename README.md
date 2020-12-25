@@ -101,9 +101,9 @@ BELUM DI SS
 <img width="364" alt="no2" src="https://user-images.githubusercontent.com/26424136/103143257-09f07080-4745-11eb-8f3f-b1de2c5578e0.PNG">
 
 #### NOMOR 3
-Membatasi DHCP dan DNS server hanya boleh menerima maksimal 3 koneksi ICMP secara bersamaan
+Membatasi DHCP dan DNS server hanya boleh menerima maksimal 3 koneksi ICMP secara bersamaan yang berasal dari mana saja.
 - UML Mojokerto <br>
-<img width="383" alt="no3" src="https://user-images.githubusercontent.com/26424136/103143258-0bba3400-4745-11eb-8f90-e9c586d754ad.PNG">
+<img width="383" alt="no3" src="https://user-images.githubusercontent.com/26424136/103143258-0bba3400-4745-11eb-8f90-e9c586d754ad.PNG"> <br>
 - UML Malang <br>
 <img width="384" alt="no3MLG" src="https://user-images.githubusercontent.com/26424136/103143259-0e1c8e00-4745-11eb-9f0b-071e289148df.PNG">
 
