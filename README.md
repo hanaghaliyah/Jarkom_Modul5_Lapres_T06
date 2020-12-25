@@ -102,10 +102,14 @@ BELUM DI SS
 
 #### NOMOR 3
 Membatasi DHCP dan DNS server hanya boleh menerima maksimal 3 koneksi ICMP secara bersamaan yang berasal dari mana saja.
+Membuat file nomor3.sh dan berikan script berikut:
+```
+iptables -A INPUT -p icmp -m connlimit --connlimit-above 3 --connlimit-mask 0 -j DROP
+```
 - UML Mojokerto <br>
 <img width="383" alt="no3" src="https://user-images.githubusercontent.com/26424136/103143258-0bba3400-4745-11eb-8f90-e9c586d754ad.PNG"> <br>
 - UML Malang <br>
-<img width="384" alt="no3MLG" src="https://user-images.githubusercontent.com/26424136/103143259-0e1c8e00-4745-11eb-9f0b-071e289148df.PNG">
+<img width="384" alt="no3MLG" src="https://user-images.githubusercontent.com/26424136/103143259-0e1c8e00-4745-11eb-9f0b-071e289148df.PNG"> <br>
 
 #### NOMOR 4
 Akses dari subnet SIDOARJO hanya diperbolehkan pada pukul 07.00 - 17.00 pada hari Senin sampai Jumat, Selain itu di <b>reject</b>. <br>
