@@ -81,23 +81,36 @@ Hasil yang didapat adalah <b>Netmask /21</b> untuk subnet besar topologi diatas.
 - ROUTING KEDIRI <br>
 ![routing kediri](https://user-images.githubusercontent.com/61286109/102912665-45bed800-44b0-11eb-9509-163626b42c1c.PNG) <br>
 
-5. Install DHCP server, DNS server dan Web server
+5. Install DHCP server, DHCP Relay, DNS server dan Web server
 - MALANG (DNS Server) <br>
 <img width="364" alt="dns server" src="https://user-images.githubusercontent.com/26424136/102977306-63825080-4535-11eb-9e09-a4fd4849cc57.PNG"> <br>
 - MOJOKERTO (DHCP Server) <br>
 <img width="369" alt="dhcp server" src="https://user-images.githubusercontent.com/26424136/102977301-61b88d00-4535-11eb-903e-588d5cc6c906.PNG"> <br>
+- SURABAYA, BATU dan KEDIRI (DHCP Relay) <br>
+BELUM DI SS <br>
 - MADIUN dan PROBOLINGGO (Web Server) <br>
 BELUM DI SS
 
 
 #### NOMOR 1
 10.151.72.90 merupakan ip eth0 SURABAYA <br>
-<img width="417" alt="no1" src="https://user-images.githubusercontent.com/26424136/102977307-641ae700-4535-11eb-8c43-1c8c10d1a930.PNG">
+<img width="417" alt="no1" src="https://user-images.githubusercontent.com/26424136/103143256-078e1680-4745-11eb-8c75-d838785b642c.PNG">
 
 #### NOMOR 2
 10.151.73.176 merupakan IP DMZ <br>
-<img width="364" alt="no2" src="https://user-images.githubusercontent.com/26424136/102977308-64b37d80-4535-11eb-8436-313a6d83541e.PNG">
+<img width="364" alt="no2" src="https://user-images.githubusercontent.com/26424136/103143257-09f07080-4745-11eb-8f3f-b1de2c5578e0.PNG">
 
 #### NOMOR 3
-UML Malang dan Mojokerto <br>
-<img width="398" alt="no3" src="https://user-images.githubusercontent.com/26424136/102977310-654c1400-4535-11eb-9bbb-9050319a4293.PNG">
+Membatasi DHCP dan DNS server hanya boleh menerima maksimal 3 koneksi ICMP secara bersamaan
+- UML Mojokerto <br>
+<img width="383" alt="no3" src="https://user-images.githubusercontent.com/26424136/103143258-0bba3400-4745-11eb-8f90-e9c586d754ad.PNG">
+- UML Malang <br>
+<img width="384" alt="no3MLG" src="https://user-images.githubusercontent.com/26424136/103143259-0e1c8e00-4745-11eb-9f0b-071e289148df.PNG">
+
+#### NOMOR 4
+Akses dari subnet SIDOARJO hanya diperbolehkan pada pukul 07.00 - 17.00 pada hari Senin sampai Jumat, Selain itu di <b>reject</b>. <br>
+<img width="366" alt="no4" src="https://user-images.githubusercontent.com/26424136/103143260-0f4dbb00-4745-11eb-911b-dc2245953f3b.PNG">
+
+#### NOMOR 5
+Akses dari subnet GRESIK hanya diperbolehkan pada pukul 17.00 hingga pukul 07.00 setiap harinya, Selain itu di <b>reject</b>.<br>
+<img width="412" alt="no5" src="https://user-images.githubusercontent.com/26424136/103143261-107ee800-4745-11eb-829a-d9d62cacc2fa.PNG">
