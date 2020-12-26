@@ -93,16 +93,24 @@ BELUM DI SS
 
 
 #### NOMOR 1
+Membuat file `nomor1.sh` yang berisikan script sebagai berikut: 
+```
+iptables -t nat -A POSTROUTING -s 192.168.0.0/16 -o eth0 -j SNAT --to-source 10.151.72.90
+```
 10.151.72.90 merupakan ip eth0 SURABAYA <br>
 <img width="417" alt="no1" src="https://user-images.githubusercontent.com/26424136/103143256-078e1680-4745-11eb-8c75-d838785b642c.PNG">
 
 #### NOMOR 2
+Membuat file `nomor2.sh` yang berisikan script sebagai berikut: 
+```
+iptables -A FORWARD -p tcp --dport 22 -d 10.151.73.176/29 -i eth0 -j DROP
+```
 10.151.73.176 merupakan IP DMZ <br>
 <img width="364" alt="no2" src="https://user-images.githubusercontent.com/26424136/103143257-09f07080-4745-11eb-8f3f-b1de2c5578e0.PNG">
 
 #### NOMOR 3
-Membatasi DHCP dan DNS server hanya boleh menerima maksimal 3 koneksi ICMP secara bersamaan yang berasal dari mana saja.
-Membuat file nomor3.sh dan berikan script berikut:
+Membatasi DHCP dan DNS server hanya boleh menerima maksimal 3 koneksi ICMP secara bersamaan yang berasal dari mana saja. <br>
+Membuat file `nomor3.sh` dan berikan script berikut:
 ```
 iptables -A INPUT -p icmp -m connlimit --connlimit-above 3 --connlimit-mask 0 -j DROP
 ```
@@ -113,8 +121,17 @@ iptables -A INPUT -p icmp -m connlimit --connlimit-above 3 --connlimit-mask 0 -j
 
 #### NOMOR 4
 Akses dari subnet SIDOARJO hanya diperbolehkan pada pukul 07.00 - 17.00 pada hari Senin sampai Jumat, Selain itu di <b>reject</b>. <br>
+Membuat file `nomor4.sh` yang berisikan script sebagai berikut: 
+```
+iptables -A INPUT -s 192.168.2.0/24 -m time --timestart 07:00 --timestop 17:00 --weekdays Mon,Tue,Wed,Thu,Fri -j ACCEPT
+iptables -A INPUT -s 10.151.36.0/24 -m time --timestart 17:01 --timestop 06:59 -j REJECT
+```
 <img width="366" alt="no4" src="https://user-images.githubusercontent.com/26424136/103143260-0f4dbb00-4745-11eb-911b-dc2245953f3b.PNG">
 
 #### NOMOR 5
 Akses dari subnet GRESIK hanya diperbolehkan pada pukul 17.00 hingga pukul 07.00 setiap harinya, Selain itu di <b>reject</b>.<br>
+Membuat file `nomor5.sh` yang berisikan script sebagai berikut: 
+```
+iptables -A INPUT -s 192.168.0.0/24 -m time --timestart 07:01 --timestop 16:59 -j REJECT
+```
 <img width="412" alt="no5" src="https://user-images.githubusercontent.com/26424136/103143261-107ee800-4745-11eb-829a-d9d62cacc2fa.PNG">
