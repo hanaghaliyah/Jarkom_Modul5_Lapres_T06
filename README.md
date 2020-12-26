@@ -95,7 +95,7 @@ BELUM DI SS
 #### NOMOR 1
 Membuat file `nomor1.sh` UML SURABAYA yang berisikan script sebagai berikut: 
 ```
-iptables -t nat -A POSTROUTING -s 192.168.0.0/16 -o eth0 -j SNAT --to-source 10.151.72.90
+iptables -t nat -A POSTROUTING -s 192.168.0.0/21 -o eth0 -j SNAT --to-source 10.151.72.90
 ```
 10.151.72.90 merupakan ip eth0 SURABAYA <br>
 <img width="417" alt="no1" src="https://user-images.githubusercontent.com/26424136/103143256-078e1680-4745-11eb-8c75-d838785b642c.PNG">
@@ -124,7 +124,7 @@ Akses dari subnet SIDOARJO hanya diperbolehkan pada pukul 07.00 - 17.00 pada har
 Membuat file `nomor4.sh` yang berisikan script sebagai berikut: 
 ```
 iptables -A INPUT -s 192.168.2.0/24 -m time --timestart 07:00 --timestop 17:00 --weekdays Mon,Tue,Wed,Thu,Fri -j ACCEPT
-iptables -A INPUT -s 10.151.36.0/24 -m time --timestart 17:01 --timestop 06:59 -j REJECT
+iptables -A INPUT -s 192.168.2.0/24 -m time --timestart 17:01 --timestop 06:59 -j REJECT
 ```
 <img width="366" alt="no4" src="https://user-images.githubusercontent.com/26424136/103143260-0f4dbb00-4745-11eb-911b-dc2245953f3b.PNG">
 
