@@ -84,7 +84,7 @@ Hasil yang didapat adalah <b>Netmask /21</b> untuk subnet besar topologi diatas.
 5. Install DHCP server, DHCP Relay, DNS server dan Web server
 Jalankan perintah `apt-get update` sebelum menginstall pada UML
 - MALANG (DNS Server) <br>
-Gunakan command `aapt-get install bind9 -y` untuk menginstall Bind9 <br>
+Gunakan command `apt-get install bind9 -y` untuk menginstall Bind9 <br>
 <img width="364" alt="dns server" src="https://user-images.githubusercontent.com/26424136/102977306-63825080-4535-11eb-9e09-a4fd4849cc57.PNG"> <br>
 - MOJOKERTO (DHCP Server) <br>
 Gunakan command `apt-get install isc-dhcp-server` untuk menginstall DHCP Server <br>
