@@ -90,7 +90,9 @@ Hasil yang didapat adalah <b>Netmask /21</b> untuk subnet besar topologi diatas.
 BELUM DI SS <br>
 - MADIUN dan PROBOLINGGO (Web Server) <br>
 BELUM DI SS
-
+6. Agar MOJOKERTO (DHCP Server) dapat berjalan dengan lancar, maka kita perlu melakukan deklarasi subnet yang terkoneksi pada MOJOKERTO yang diatur di `etc/dhcp/dhcpd.conf`. Terdapat subnet S1, A1 dan A4.
+<img width="370" alt="dhcpconf1" src="https://user-images.githubusercontent.com/26424136/103148185-bce5bc00-478f-11eb-8a09-48acd27410da.PNG">
+<img width="366" alt="dhcpconf2" src="https://user-images.githubusercontent.com/26424136/103148187-beaf7f80-478f-11eb-8f05-2114794e9e28.PNG">
 
 #### NOMOR 1
 Membuat file `nomor1.sh` UML SURABAYA yang berisikan script sebagai berikut: 
@@ -98,7 +100,9 @@ Membuat file `nomor1.sh` UML SURABAYA yang berisikan script sebagai berikut:
 iptables -t nat -A POSTROUTING -s 192.168.0.0/21 -o eth0 -j SNAT --to-source 10.151.72.90
 ```
 10.151.72.90 merupakan ip eth0 SURABAYA <br>
-<img width="417" alt="no1" src="https://user-images.githubusercontent.com/26424136/103143256-078e1680-4745-11eb-8c75-d838785b642c.PNG">
+<img width="371" alt="no1" src="https://user-images.githubusercontent.com/26424136/103148188-bf481600-478f-11eb-9d6a-d25ea1d955c2.PNG">
+##### Testing
+![test1](https://user-images.githubusercontent.com/26424136/103148197-c53df700-478f-11eb-854c-385c32df1cc5.png)
 
 #### NOMOR 2
 Membuat file `nomor2.sh` pada UML SURABAYA yang berisikan script sebagai berikut: 
@@ -106,7 +110,9 @@ Membuat file `nomor2.sh` pada UML SURABAYA yang berisikan script sebagai berikut
 iptables -A FORWARD -p tcp --dport 22 -d 10.151.73.176/29 -i eth0 -j DROP
 ```
 10.151.73.176 merupakan IP DMZ <br>
-<img width="364" alt="no2" src="https://user-images.githubusercontent.com/26424136/103143257-09f07080-4745-11eb-8f3f-b1de2c5578e0.PNG">
+<img width="364" alt="no2" src="https://user-images.githubusercontent.com/26424136/103148189-bfe0ac80-478f-11eb-921f-55a4c5a04e03.PNG">
+##### Testing
+<img width="960" alt="test2" src="https://user-images.githubusercontent.com/26424136/103148200-c8d17e00-478f-11eb-9f2f-79dd1c1de807.png">
 
 #### NOMOR 3
 Membatasi DHCP dan DNS server hanya boleh menerima maksimal 3 koneksi ICMP secara bersamaan yang berasal dari mana saja. <br>
@@ -115,9 +121,14 @@ Membuat file `nomor3.sh` dan berikan script berikut:
 iptables -A INPUT -p icmp -m connlimit --connlimit-above 3 --connlimit-mask 0 -j DROP
 ```
 - UML Mojokerto <br>
-<img width="383" alt="no3" src="https://user-images.githubusercontent.com/26424136/103143258-0bba3400-4745-11eb-8f90-e9c586d754ad.PNG"> <br>
+<img width="370" alt="no3" src="https://user-images.githubusercontent.com/26424136/103148190-c0794300-478f-11eb-987f-9c19051346a3.PNG"> <br>
 - UML Malang <br>
-<img width="384" alt="no3MLG" src="https://user-images.githubusercontent.com/26424136/103143259-0e1c8e00-4745-11eb-9f0b-071e289148df.PNG"> <br>
+<img width="370" alt="no3MLG" src="https://user-images.githubusercontent.com/26424136/103148191-c0794300-478f-11eb-9212-ab2028771ad6.PNG"> <br>
+##### Testing
+- Ping ke IP MALANG 10.151.73.178 
+<img width="960" alt="test3mojo" src="https://user-images.githubusercontent.com/26424136/103148202-cd963200-478f-11eb-9c04-8591c472aff1.png"> <br>
+- Ping ke IP MOJOKERTO 10.151.73.179
+<img width="960" alt="test3mlg" src="https://user-images.githubusercontent.com/26424136/103148201-cb33d800-478f-11eb-9bc0-578233a1a747.png"> <br>
 
 #### NOMOR 4
 Akses dari subnet SIDOARJO hanya diperbolehkan pada pukul 07.00 - 17.00 pada hari Senin sampai Jumat, Selain itu di <b>reject</b>. <br>
@@ -126,7 +137,9 @@ Membuat file `nomor4.sh` yang berisikan script sebagai berikut:
 iptables -A INPUT -s 192.168.2.0/24 -m time --timestart 07:00 --timestop 17:00 --weekdays Mon,Tue,Wed,Thu,Fri -j ACCEPT
 iptables -A INPUT -s 192.168.2.0/24 -m time --timestart 17:01 --timestop 06:59 -j REJECT
 ```
-<img width="366" alt="no4" src="https://user-images.githubusercontent.com/26424136/103143260-0f4dbb00-4745-11eb-911b-dc2245953f3b.PNG">
+<img width="366" alt="no4" src="https://user-images.githubusercontent.com/26424136/103148192-c111d980-478f-11eb-999e-32c038dbee9b.PNG">
+##### Testing
+<img width="729" alt="test4 (2)" src="https://user-images.githubusercontent.com/26424136/103148203-cf5ff580-478f-11eb-8087-3392ba0835c0.png">
 
 #### NOMOR 5
 Akses dari subnet GRESIK hanya diperbolehkan pada pukul 17.00 hingga pukul 07.00 setiap harinya, Selain itu di <b>reject</b>.<br>
@@ -134,4 +147,35 @@ Membuat file `nomor5.sh` yang berisikan script sebagai berikut:
 ```
 iptables -A INPUT -s 192.168.0.0/24 -m time --timestart 07:01 --timestop 16:59 -j REJECT
 ```
-<img width="412" alt="no5" src="https://user-images.githubusercontent.com/26424136/103143261-107ee800-4745-11eb-829a-d9d62cacc2fa.PNG">
+<img width="412" alt="no5" src="https://user-images.githubusercontent.com/26424136/103148193-c1aa7000-478f-11eb-8af6-3635e2022db4.PNG">
+##### Testing
+<img width="728" alt="test5 (2)" src="https://user-images.githubusercontent.com/26424136/103148205-d424a980-478f-11eb-8f4e-981d25c89f69.png">
+
+#### NOMOR 6
+Membuat file `nomor6.sh` pada UML SURABAYA yang berisikan script sebagai berikut: 
+```
+iptables -A PREROUTING -t nat -p tcp -d 10.151.73.178 -m statistic --mode nth --every 2 --packet 0 -j DNAT --to-destination 192.168.1.2:80
+iptables -A PREROUTING -t nat -p tcp -d 10.151.73.178 -j DNAT --to-destination 192.168.1.3:80
+```
+<img width="370" alt="no6" src="https://user-images.githubusercontent.com/26424136/103148194-c2430680-478f-11eb-8225-244475250142.PNG">
+##### Testing
+
+#### NOMOR 7
+Membuat file `nomor7.sh` pada UML SURABAYA yang berisikan script LOGGING sebagai berikut:
+```
+iptables -N LOGGING
+iptables -A FORWARD -d 10.151.73.176/29 -i eth0 -p tcp -m tcp --dport 22 -j LOGGING
+iptables -A LOGGING -m limit --limit 2/min -j LOG --log-prefix "IPTables-Dropped: " --log-level 4
+iptables -A LOGGING -j DROP
+```
+<img width="370" alt="no7(1)" src="https://user-images.githubusercontent.com/26424136/103148195-c2db9d00-478f-11eb-87a0-12895cb04b4e.PNG"> <br>
+Membuat file `nomor7.sh` pada UML MALANG dan MOJOKERTO yang berisikan script LOGGING sebagai berikut:
+```
+iptables -N LOGGING
+iptables -A INPUT -p icmp -m connlimit --connlimit-above 3 --connlimit-mask 0 -j LOGGING
+iptables -A LOGGING -m limit --limit 2/min -j LOG --log-prefix "IPTables-Dropped: " --log-level 4
+iptables -A LOGGING -j DROP
+```
+<img width="734" alt="no7(2)" src="https://user-images.githubusercontent.com/26424136/103148196-c3743380-478f-11eb-97f6-e3a7770b17eb.PNG">
+
+##### Testing
