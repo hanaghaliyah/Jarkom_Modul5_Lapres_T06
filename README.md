@@ -125,9 +125,9 @@ iptables -A INPUT -p icmp -m connlimit --connlimit-above 3 --connlimit-mask 0 -j
 - UML Malang <br>
 <img width="370" alt="no3MLG" src="https://user-images.githubusercontent.com/26424136/103148191-c0794300-478f-11eb-9212-ab2028771ad6.PNG"> <br>
 ##### Testing
-- Ping ke IP MALANG 10.151.73.178 
-<img width="960" alt="test3mojo" src="https://user-images.githubusercontent.com/26424136/103148202-cd963200-478f-11eb-9c04-8591c472aff1.png"> <br>
 - Ping ke IP MOJOKERTO 10.151.73.179
+<img width="960" alt="test3mojo" src="https://user-images.githubusercontent.com/26424136/103148202-cd963200-478f-11eb-9c04-8591c472aff1.png"> <br>
+- Ping ke IP MALANG 10.151.73.178
 <img width="960" alt="test3mlg" src="https://user-images.githubusercontent.com/26424136/103148201-cb33d800-478f-11eb-9bc0-578233a1a747.png"> <br>
 
 #### NOMOR 4
