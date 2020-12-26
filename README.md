@@ -82,17 +82,29 @@ Hasil yang didapat adalah <b>Netmask /21</b> untuk subnet besar topologi diatas.
 ![routing kediri](https://user-images.githubusercontent.com/61286109/102912665-45bed800-44b0-11eb-9509-163626b42c1c.PNG) <br>
 
 5. Install DHCP server, DHCP Relay, DNS server dan Web server
+Jalankan perintah `apt-get update` sebelum menginstall pada UML
 - MALANG (DNS Server) <br>
+Gunakan command `aapt-get install bind9 -y` untuk menginstall Bind9 <br>
 <img width="364" alt="dns server" src="https://user-images.githubusercontent.com/26424136/102977306-63825080-4535-11eb-9e09-a4fd4849cc57.PNG"> <br>
 - MOJOKERTO (DHCP Server) <br>
+Gunakan command `apt-get install isc-dhcp-server` untuk menginstall DHCP Server <br>
 <img width="369" alt="dhcp server" src="https://user-images.githubusercontent.com/26424136/102977301-61b88d00-4535-11eb-903e-588d5cc6c906.PNG"> <br>
 - SURABAYA, BATU dan KEDIRI (DHCP Relay) <br>
+Gunakan command `apt-get install isc-dhcp-relay` untuk menginstall DHCP Relay <br>
 BELUM DI SS <br>
 - MADIUN dan PROBOLINGGO (Web Server) <br>
 BELUM DI SS
+
 6. Agar MOJOKERTO (DHCP Server) dapat berjalan dengan lancar, maka kita perlu melakukan deklarasi subnet yang terkoneksi pada MOJOKERTO yang diatur di `etc/dhcp/dhcpd.conf`. Terdapat subnet S2, A1 dan A4.
 <img width="370" alt="dhcpconf1" src="https://user-images.githubusercontent.com/26424136/103148185-bce5bc00-478f-11eb-8a09-48acd27410da.PNG">
 <img width="366" alt="dhcpconf2" src="https://user-images.githubusercontent.com/26424136/103148187-beaf7f80-478f-11eb-8f05-2114794e9e28.PNG">
+7. Agar DHCP Request dari Client SIDOARJO dan Client GRESIK dapat diteruskan ke DHCP Server MOJOKERTO, maka kita memerlukan DHCP Relay di ketiga router yaitu SURABAYA, KEDIRI dan BATU. Lakukan setting pada server dan interfaces dimana akan membantu DHCP Request agar dapat diteruskan dengan baik ke DHCP Server pada file `/etc/default/isc-dhcp-relay`.
+- DHCP Relay SURABAYA
+<img width="371" alt="relaysby" src="https://user-images.githubusercontent.com/26424136/103148611-3089c800-4794-11eb-9081-c525527f5bfc.PNG">
+- DHCP Relay BATU
+<img width="370" alt="relaybatu" src="https://user-images.githubusercontent.com/26424136/103148606-2ec00480-4794-11eb-8c44-94f1047bf0f7.PNG">
+- DHCP Relay KEDIRI
+<img width="370" alt="relaykediri" src="https://user-images.githubusercontent.com/26424136/103148609-2ff13180-4794-11eb-90bf-509a83cea13d.PNG">
 
 #### NOMOR 1
 Membuat file `nomor1.sh` UML SURABAYA yang berisikan script sebagai berikut: 
