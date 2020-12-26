@@ -99,7 +99,8 @@ BELUM DI SS
 <img width="370" alt="dhcpconf1" src="https://user-images.githubusercontent.com/26424136/103148185-bce5bc00-478f-11eb-8a09-48acd27410da.PNG">
 <img width="366" alt="dhcpconf2" src="https://user-images.githubusercontent.com/26424136/103148187-beaf7f80-478f-11eb-8f05-2114794e9e28.PNG">
 <br>
-7. Agar DHCP Request dari Client SIDOARJO dan Client GRESIK dapat diteruskan ke DHCP Server MOJOKERTO, maka kita memerlukan DHCP Relay di ketiga router yaitu SURABAYA, KEDIRI dan BATU. Lakukan setting pada server dan interfaces dimana akan membantu DHCP Request agar dapat diteruskan dengan baik ke DHCP Server pada file `/etc/default/isc-dhcp-relay`.
+7. Agar DHCP Request dari Client SIDOARJO dan Client GRESIK dapat diteruskan ke DHCP Server MOJOKERTO, maka kita memerlukan DHCP Relay di ketiga router yaitu SURABAYA, KEDIRI dan BATU. 
+Lakukan setting pada server dan interfaces dimana akan membantu DHCP Request agar dapat diteruskan dengan baik ke DHCP Server pada file `/etc/default/isc-dhcp-relay`
 <br>
 - DHCP Relay SURABAYA
 <img width="371" alt="relaysby" src="https://user-images.githubusercontent.com/26424136/103148611-3089c800-4794-11eb-9081-c525527f5bfc.PNG"> <br>
