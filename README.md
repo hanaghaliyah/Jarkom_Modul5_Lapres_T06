@@ -93,7 +93,7 @@ BELUM DI SS
 
 
 #### NOMOR 1
-Membuat file `nomor1.sh` yang berisikan script sebagai berikut: 
+Membuat file `nomor1.sh` UML SURABAYA yang berisikan script sebagai berikut: 
 ```
 iptables -t nat -A POSTROUTING -s 192.168.0.0/16 -o eth0 -j SNAT --to-source 10.151.72.90
 ```
@@ -101,7 +101,7 @@ iptables -t nat -A POSTROUTING -s 192.168.0.0/16 -o eth0 -j SNAT --to-source 10.
 <img width="417" alt="no1" src="https://user-images.githubusercontent.com/26424136/103143256-078e1680-4745-11eb-8c75-d838785b642c.PNG">
 
 #### NOMOR 2
-Membuat file `nomor2.sh` yang berisikan script sebagai berikut: 
+Membuat file `nomor2.sh` pada UML SURABAYA yang berisikan script sebagai berikut: 
 ```
 iptables -A FORWARD -p tcp --dport 22 -d 10.151.73.176/29 -i eth0 -j DROP
 ```
