@@ -98,11 +98,11 @@ BELUM DI SS
 6. Agar MOJOKERTO (DHCP Server) dapat berjalan dengan lancar, maka kita perlu melakukan deklarasi subnet yang terkoneksi pada MOJOKERTO yang diatur di `etc/dhcp/dhcpd.conf`. Terdapat subnet S2, A1 dan A4.
 <img width="370" alt="dhcpconf1" src="https://user-images.githubusercontent.com/26424136/103148185-bce5bc00-478f-11eb-8a09-48acd27410da.PNG">
 <img width="366" alt="dhcpconf2" src="https://user-images.githubusercontent.com/26424136/103148187-beaf7f80-478f-11eb-8f05-2114794e9e28.PNG">
-7. Agar DHCP Request dari Client SIDOARJO dan Client GRESIK dapat diteruskan ke DHCP Server MOJOKERTO, maka kita memerlukan DHCP Relay di ketiga router yaitu SURABAYA, KEDIRI dan BATU. Lakukan setting pada server dan interfaces dimana akan membantu DHCP Request agar dapat diteruskan dengan baik ke DHCP Server pada file `/etc/default/isc-dhcp-relay`.
+7. Agar DHCP Request dari Client SIDOARJO dan Client GRESIK dapat diteruskan ke DHCP Server MOJOKERTO, maka kita memerlukan DHCP Relay di ketiga router yaitu SURABAYA, KEDIRI dan BATU. Lakukan setting pada server dan interfaces dimana akan membantu DHCP Request agar dapat diteruskan dengan baik ke DHCP Server pada file `/etc/default/isc-dhcp-relay`. <br>
 - DHCP Relay SURABAYA
-<img width="371" alt="relaysby" src="https://user-images.githubusercontent.com/26424136/103148611-3089c800-4794-11eb-9081-c525527f5bfc.PNG">
+<img width="371" alt="relaysby" src="https://user-images.githubusercontent.com/26424136/103148611-3089c800-4794-11eb-9081-c525527f5bfc.PNG"> <br>
 - DHCP Relay BATU
-<img width="370" alt="relaybatu" src="https://user-images.githubusercontent.com/26424136/103148606-2ec00480-4794-11eb-8c44-94f1047bf0f7.PNG">
+<img width="370" alt="relaybatu" src="https://user-images.githubusercontent.com/26424136/103148606-2ec00480-4794-11eb-8c44-94f1047bf0f7.PNG"> <br>
 - DHCP Relay KEDIRI
 <img width="370" alt="relaykediri" src="https://user-images.githubusercontent.com/26424136/103148609-2ff13180-4794-11eb-90bf-509a83cea13d.PNG">
 
