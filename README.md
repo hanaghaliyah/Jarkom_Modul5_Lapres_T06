@@ -90,7 +90,7 @@ Hasil yang didapat adalah <b>Netmask /21</b> untuk subnet besar topologi diatas.
 BELUM DI SS <br>
 - MADIUN dan PROBOLINGGO (Web Server) <br>
 BELUM DI SS
-6. Agar MOJOKERTO (DHCP Server) dapat berjalan dengan lancar, maka kita perlu melakukan deklarasi subnet yang terkoneksi pada MOJOKERTO yang diatur di `etc/dhcp/dhcpd.conf`. Terdapat subnet S1, A1 dan A4.
+6. Agar MOJOKERTO (DHCP Server) dapat berjalan dengan lancar, maka kita perlu melakukan deklarasi subnet yang terkoneksi pada MOJOKERTO yang diatur di `etc/dhcp/dhcpd.conf`. Terdapat subnet S2, A1 dan A4.
 <img width="370" alt="dhcpconf1" src="https://user-images.githubusercontent.com/26424136/103148185-bce5bc00-478f-11eb-8a09-48acd27410da.PNG">
 <img width="366" alt="dhcpconf2" src="https://user-images.githubusercontent.com/26424136/103148187-beaf7f80-478f-11eb-8f05-2114794e9e28.PNG">
 
@@ -137,7 +137,7 @@ Membuat file `nomor4.sh` yang berisikan script sebagai berikut:
 iptables -A INPUT -s 192.168.2.0/24 -m time --timestart 07:00 --timestop 17:00 --weekdays Mon,Tue,Wed,Thu,Fri -j ACCEPT
 iptables -A INPUT -s 192.168.2.0/24 -m time --timestart 17:01 --timestop 06:59 -j REJECT
 ```
-<img width="366" alt="no4" src="https://user-images.githubusercontent.com/26424136/103148192-c111d980-478f-11eb-999e-32c038dbee9b.PNG">
+<img width="366" alt="no4" src="https://user-images.githubusercontent.com/26424136/103148192-c111d980-478f-11eb-999e-32c038dbee9b.PNG"> <br>
 ##### Testing
 <img width="729" alt="test4 (2)" src="https://user-images.githubusercontent.com/26424136/103148203-cf5ff580-478f-11eb-8087-3392ba0835c0.png">
 
@@ -147,7 +147,7 @@ Membuat file `nomor5.sh` yang berisikan script sebagai berikut:
 ```
 iptables -A INPUT -s 192.168.0.0/24 -m time --timestart 07:01 --timestop 16:59 -j REJECT
 ```
-<img width="412" alt="no5" src="https://user-images.githubusercontent.com/26424136/103148193-c1aa7000-478f-11eb-8af6-3635e2022db4.PNG">
+<img width="412" alt="no5" src="https://user-images.githubusercontent.com/26424136/103148193-c1aa7000-478f-11eb-8af6-3635e2022db4.PNG"> <br>
 ##### Testing
 <img width="728" alt="test5 (2)" src="https://user-images.githubusercontent.com/26424136/103148205-d424a980-478f-11eb-8f4e-981d25c89f69.png">
 
@@ -157,7 +157,7 @@ Membuat file `nomor6.sh` pada UML SURABAYA yang berisikan script sebagai berikut
 iptables -A PREROUTING -t nat -p tcp -d 10.151.73.178 -m statistic --mode nth --every 2 --packet 0 -j DNAT --to-destination 192.168.1.2:80
 iptables -A PREROUTING -t nat -p tcp -d 10.151.73.178 -j DNAT --to-destination 192.168.1.3:80
 ```
-<img width="370" alt="no6" src="https://user-images.githubusercontent.com/26424136/103148194-c2430680-478f-11eb-8225-244475250142.PNG">
+<img width="370" alt="no6" src="https://user-images.githubusercontent.com/26424136/103148194-c2430680-478f-11eb-8225-244475250142.PNG"> <br>
 ##### Testing
 
 #### NOMOR 7
@@ -176,6 +176,5 @@ iptables -A INPUT -p icmp -m connlimit --connlimit-above 3 --connlimit-mask 0 -j
 iptables -A LOGGING -m limit --limit 2/min -j LOG --log-prefix "IPTables-Dropped: " --log-level 4
 iptables -A LOGGING -j DROP
 ```
-<img width="734" alt="no7(2)" src="https://user-images.githubusercontent.com/26424136/103148196-c3743380-478f-11eb-97f6-e3a7770b17eb.PNG">
-
+<img width="734" alt="no7(2)" src="https://user-images.githubusercontent.com/26424136/103148196-c3743380-478f-11eb-97f6-e3a7770b17eb.PNG"> <br>
 ##### Testing
