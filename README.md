@@ -91,14 +91,18 @@ Gunakan command `apt-get install isc-dhcp-server` untuk menginstall DHCP Server 
 <img width="369" alt="dhcp server" src="https://user-images.githubusercontent.com/26424136/102977301-61b88d00-4535-11eb-903e-588d5cc6c906.PNG"> <br>
 - SURABAYA, BATU dan KEDIRI (DHCP Relay) <br>
 Gunakan command `apt-get install isc-dhcp-relay` untuk menginstall DHCP Relay <br>
-1. DHCP RELAY SURABAYA <br>
+DHCP RELAY SURABAYA <br>
 ![relay surabaya](https://user-images.githubusercontent.com/61286109/103164621-4d7bd500-4840-11eb-9530-7a40f61e0276.PNG) <br>
-2. DHCP RELAY BATU <br>
+DHCP RELAY BATU <br>
 ![relay batu](https://user-images.githubusercontent.com/61286109/103164623-4f459880-4840-11eb-9ee7-aa9a48f1528c.PNG) <br>
-3. DHCP RELAY KEDIRI <br>
+DHCP RELAY KEDIRI <br>
 ![relay kediri](https://user-images.githubusercontent.com/61286109/103164624-4fde2f00-4840-11eb-8df5-9f99771015b8.PNG) <br>
 - MADIUN dan PROBOLINGGO (Web Server) <br>
-BELUM DI SS
+Gunakan command `apt-get install apache2` untuk menginstall Web Server Apache <br>
+WEB SERVER PROBOLINGGO <br>
+![web server probolinggo](https://user-images.githubusercontent.com/61286109/103164757-bc0d6280-4841-11eb-9a3d-82902ef82032.PNG) <br>
+WEB SERVER MADIUN <br>
+![web server madiun](https://user-images.githubusercontent.com/61286109/103164756-ba439f00-4841-11eb-836b-1eb0b62ecc04.PNG) <br>
 
 6. Agar MOJOKERTO (DHCP Server) dapat berjalan dengan lancar, maka kita perlu melakukan deklarasi subnet yang terkoneksi pada MOJOKERTO yang diatur di `etc/dhcp/dhcpd.conf`. Terdapat subnet S2, A1 dan A4.
 <img width="370" alt="dhcpconf1" src="https://user-images.githubusercontent.com/26424136/103148185-bce5bc00-478f-11eb-8a09-48acd27410da.PNG">
