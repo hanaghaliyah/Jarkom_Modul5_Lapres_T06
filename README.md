@@ -91,7 +91,12 @@ Gunakan command `apt-get install isc-dhcp-server` untuk menginstall DHCP Server 
 <img width="369" alt="dhcp server" src="https://user-images.githubusercontent.com/26424136/102977301-61b88d00-4535-11eb-903e-588d5cc6c906.PNG"> <br>
 - SURABAYA, BATU dan KEDIRI (DHCP Relay) <br>
 Gunakan command `apt-get install isc-dhcp-relay` untuk menginstall DHCP Relay <br>
-BELUM DI SS <br>
+1. DHCP RELAY SURABAYA <br>
+![relay surabaya](https://user-images.githubusercontent.com/61286109/103164621-4d7bd500-4840-11eb-9530-7a40f61e0276.PNG) <br>
+2. DHCP RELAY BATU <br>
+![relay batu](https://user-images.githubusercontent.com/61286109/103164623-4f459880-4840-11eb-9ee7-aa9a48f1528c.PNG) <br>
+3. DHCP RELAY KEDIRI <br>
+![relay kediri](https://user-images.githubusercontent.com/61286109/103164624-4fde2f00-4840-11eb-8df5-9f99771015b8.PNG) <br>
 - MADIUN dan PROBOLINGGO (Web Server) <br>
 BELUM DI SS
 
