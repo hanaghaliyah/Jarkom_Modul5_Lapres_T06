@@ -190,7 +190,7 @@ iptables -A FORWARD -j LOGGING
 iptables -A LOGGING -m limit --limit 2/min -j LOG --log-prefix "IPTables-Dropped: " --log-level 4 
 iptables -A LOGGING -j DROP
 ```
-<img width="370" alt="no7(1)" src="https://user-images.githubusercontent.com/26424136/103209310-60bc9c80-4935-11eb-888e-ade80639aa0b.PNG"> <br>
+<img width="367" alt="no7(1)" src="https://user-images.githubusercontent.com/26424136/103209793-81d1bd00-4936-11eb-8d5f-270cb6946460.PNG"> <br>
 Membuat file `nomor7.sh` pada UML MALANG dan MOJOKERTO yang berisikan script LOGGING sebagai berikut:
 ```
 iptables -N LOGGING 
