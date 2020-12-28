@@ -185,18 +185,18 @@ iptables -A PREROUTING -t nat -p tcp -d 10.151.73.178 -j DNAT --to-destination 1
 #### NOMOR 7
 Membuat file `nomor7.sh` pada UML SURABAYA yang berisikan script LOGGING sebagai berikut:
 ```
-iptables -N LOGGING
-iptables -A FORWARD -d 10.151.73.176/29 -i eth0 -p tcp -m tcp --dport 22 -j LOGGING
-iptables -A LOGGING -m limit --limit 2/min -j LOG --log-prefix "IPTables-Dropped: " --log-level 4
+iptables -N LOGGING 
+iptables -A FORWARD -j LOGGING 
+iptables -A LOGGING -m limit --limit 2/min -j LOG --log-prefix "IPTables-Dropped: " --log-level 4 
 iptables -A LOGGING -j DROP
 ```
-<img width="370" alt="no7(1)" src="https://user-images.githubusercontent.com/26424136/103148195-c2db9d00-478f-11eb-87a0-12895cb04b4e.PNG"> <br>
+<img width="370" alt="no7(1)" src="https://user-images.githubusercontent.com/26424136/103209310-60bc9c80-4935-11eb-888e-ade80639aa0b.PNG"> <br>
 Membuat file `nomor7.sh` pada UML MALANG dan MOJOKERTO yang berisikan script LOGGING sebagai berikut:
 ```
-iptables -N LOGGING
-iptables -A INPUT -p icmp -m connlimit --connlimit-above 3 --connlimit-mask 0 -j LOGGING
-iptables -A LOGGING -m limit --limit 2/min -j LOG --log-prefix "IPTables-Dropped: " --log-level 4
+iptables -N LOGGING 
+iptables -A INPUT -j LOGGING 
+iptables -A LOGGING -m limit --limit 2/min -j LOG --log-prefix "IPTables-Dropped: " --log-level 4 
 iptables -A LOGGING -j DROP
 ```
-<img width="734" alt="no7(2)" src="https://user-images.githubusercontent.com/26424136/103148196-c3743380-478f-11eb-97f6-e3a7770b17eb.PNG"> <br>
+<img width="732" alt="no7(2)" src="https://user-images.githubusercontent.com/26424136/103209315-64502380-4935-11eb-9db7-4475bb854d91.PNG">  <br>
 ##### Testing
