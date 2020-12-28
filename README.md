@@ -164,8 +164,9 @@ iptables -A INPUT -p icmp -m connlimit --connlimit-above 3 --connlimit-mask 0 -j
 Akses dari subnet SIDOARJO hanya diperbolehkan pada pukul 07.00 - 17.00 pada hari Senin sampai Jumat, Selain itu di <b>reject</b>. <br>
 Membuat file `nomor4.sh` yang berisikan script sebagai berikut: 
 ```
-iptables -A INPUT -s 192.168.2.0/24 -m time --timestart 07:00 --timestop 17:00 --weekdays Mon,Tue,Wed,Thu,Fri -j ACCEPT
-iptables -A INPUT -s 192.168.2.0/24 -m time --timestart 17:01 --timestop 06:59 -j REJECT
+iptables -A INPUT -s 192.168.2.0/24 -m time --timestart 00:00 --timestop 06:59 --weekdays Mon,Tue,Wed,Thu,Fri -j REJECT
+iptables -A INPUT -s 192.168.2.0/24 -m time --timestart 17:01 --timestop 23:59 --weekdays Mon,Tue,Wed,Thu,Fri -j REJECT
+iptables -A INPUT -s 192.168.2.0/24 -m time --weekdays Sat,Sun -j REJECT
 ```
 <img width="366" alt="no4" src="https://user-images.githubusercontent.com/26424136/103148192-c111d980-478f-11eb-999e-32c038dbee9b.PNG"> <br>
 ##### Testing
