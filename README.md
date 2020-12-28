@@ -158,10 +158,10 @@ iptables -A INPUT -p icmp -m connlimit --connlimit-above 3 --connlimit-mask 0 -j
 - UML Malang <br>
 <img width="370" alt="no3MLG" src="https://user-images.githubusercontent.com/26424136/103148191-c0794300-478f-11eb-9212-ab2028771ad6.PNG"> <br>
 ##### Testing
-- Ping ke IP MOJOKERTO 10.151.73.179
+- Ping ke IP MOJOKERTO 10.151.73.179 <br>
 Karena dibatasi hanya boleh menerima maksimal 3 koneksi, maka dapat dilihat bahwa yang <b>berhasil</b> melakukan ping yaitu <i>sidoarjo, gresik, kediri</i> dan yang <b>tidak berhasil</b> yaitu <i>probolinggo</i>.
 <img width="960" alt="test3mojo" src="https://user-images.githubusercontent.com/26424136/103148202-cd963200-478f-11eb-9c04-8591c472aff1.png"> <br>
-- Ping ke IP MALANG 10.151.73.178
+- Ping ke IP MALANG 10.151.73.178 <br>
 Dapat dilihat bahwa yang <b>berhasil</b> melakukan ping yaitu <i>sidoarjo, gresik, probolinggo</i> dan yang <b>tidak berhasil</b> yaitu <i>kediri</i>.
 <img width="960" alt="test3mlg" src="https://user-images.githubusercontent.com/26424136/103148201-cb33d800-478f-11eb-9bc0-578233a1a747.png"> <br>
 
@@ -178,7 +178,7 @@ iptables -A INPUT -s 192.168.2.0/24 -m time --weekdays Sat,Sun -j REJECT
 - Melakukan test dengan netcat dari SIDOARJO ke MALANG pada waktu yang tidak diperbolehkan dan hasilnya gagal.
 <img width="729" alt="test4 (2)" src="https://user-images.githubusercontent.com/26424136/103148203-cf5ff580-478f-11eb-8087-3392ba0835c0.png">
 - Melakukan ping dari SIDOARJO ke MALANG pada waktu yang tidak diperbolehkan dan hasilnya gagal.
-<img width="730" alt="test4 (3)" src="https://user-images.githubusercontent.com/26424136/103218179-f44d9780-494c-11eb-97cf-dd3da211885e.png"> <br>
+<img width="730" alt="test4 (3)" src="https://user-images.githubusercontent.com/26424136/103218179-f44d9780-494c-11eb-97cf-dd3da211885e.png">
 <b>NB</b>: Gunakan perintah `date -s "TahunBulanTanggal Jam:Menit"` untuk mengganti tanggal pada UML.
 
 #### NOMOR 5
