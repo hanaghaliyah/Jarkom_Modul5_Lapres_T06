@@ -115,6 +115,9 @@ WEB SERVER MADIUN <br>
 <img width="370" alt="relaybatu" src="https://user-images.githubusercontent.com/26424136/103148606-2ec00480-4794-11eb-8c44-94f1047bf0f7.PNG"> 
 - DHCP Relay KEDIRI <br>
 <img width="370" alt="relaykediri" src="https://user-images.githubusercontent.com/26424136/103148609-2ff13180-4794-11eb-90bf-509a83cea13d.PNG">
+8. DHCP Server
+<img width="369" alt="dhcp server (2)" src="https://user-images.githubusercontent.com/26424136/103210086-3c61bf80-4937-11eb-950d-a785c001f0ef.PNG">
+
 
 #### NOMOR 1
 Membuat file `nomor1.sh` UML SURABAYA yang berisikan script sebagai berikut: 
