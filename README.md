@@ -133,6 +133,7 @@ iptables -t nat -A POSTROUTING -s 192.168.0.0/21 -o eth0 -j SNAT --to-source 10.
 10.151.72.90 merupakan ip eth0 SURABAYA <br>
 <img width="371" alt="no1" src="https://user-images.githubusercontent.com/26424136/103148188-bf481600-478f-11eb-9d6a-d25ea1d955c2.PNG">
 ##### Testing
+Ping berhasil saat menggunakan iptables tersebut. <br>
 ![test1](https://user-images.githubusercontent.com/26424136/103148197-c53df700-478f-11eb-854c-385c32df1cc5.png)
 
 #### NOMOR 2
@@ -143,6 +144,7 @@ iptables -A FORWARD -p tcp --dport 22 -d 10.151.73.176/29 -i eth0 -j DROP
 10.151.73.176 merupakan IP DMZ <br>
 <img width="364" alt="no2" src="https://user-images.githubusercontent.com/26424136/103148189-bfe0ac80-478f-11eb-921f-55a4c5a04e03.PNG">
 ##### Testing
+Hasil blok suatu kiriman text melalui port 22 (SSH) dari luar (putty) ke dalam topologi (MALANG dan MOJOKERTO) menggunakan netcat.
 <img width="960" alt="test2" src="https://user-images.githubusercontent.com/26424136/103148200-c8d17e00-478f-11eb-9f2f-79dd1c1de807.png">
 
 #### NOMOR 3
@@ -157,8 +159,10 @@ iptables -A INPUT -p icmp -m connlimit --connlimit-above 3 --connlimit-mask 0 -j
 <img width="370" alt="no3MLG" src="https://user-images.githubusercontent.com/26424136/103148191-c0794300-478f-11eb-9212-ab2028771ad6.PNG"> <br>
 ##### Testing
 - Ping ke IP MOJOKERTO 10.151.73.179
+Karena dibatasi hanya boleh menerima maksimal 3 koneksi, maka dapat dilihat bahwa yang <b>berhasil</b> melakukan ping yaitu <i>sidoarjo, gresik, kediri</i> dan yang <b>tidak berhasil</b> yaitu <i>probolinggo</i>.
 <img width="960" alt="test3mojo" src="https://user-images.githubusercontent.com/26424136/103148202-cd963200-478f-11eb-9c04-8591c472aff1.png"> <br>
 - Ping ke IP MALANG 10.151.73.178
+Dapat dilihat bahwa yang <b>berhasil</b> melakukan ping yaitu <i>sidoarjo, gresik, probolinggo</i> dan yang <b>tidak berhasil</b> yaitu <i>kediri</i>.
 <img width="960" alt="test3mlg" src="https://user-images.githubusercontent.com/26424136/103148201-cb33d800-478f-11eb-9bc0-578233a1a747.png"> <br>
 
 #### NOMOR 4
@@ -171,8 +175,11 @@ iptables -A INPUT -s 192.168.2.0/24 -m time --weekdays Sat,Sun -j REJECT
 ```
 <img width="371" alt="no4" src="https://user-images.githubusercontent.com/26424136/103217880-4641ed80-494c-11eb-8f85-7ea0ffbde7aa.PNG"> <br>
 ##### Testing
+- Melakukan test dengan netcat dari SIDOARJO ke MALANG pada waktu yang tidak diperbolehkan dan hasilnya gagal.
 <img width="729" alt="test4 (2)" src="https://user-images.githubusercontent.com/26424136/103148203-cf5ff580-478f-11eb-8087-3392ba0835c0.png">
-<img width="730" alt="test4 (3)" src="https://user-images.githubusercontent.com/26424136/103218179-f44d9780-494c-11eb-97cf-dd3da211885e.png">
+- Melakukan ping dari SIDOARJO ke MALANG pada waktu yang tidak diperbolehkan dan hasilnya gagal.
+<img width="730" alt="test4 (3)" src="https://user-images.githubusercontent.com/26424136/103218179-f44d9780-494c-11eb-97cf-dd3da211885e.png"> <br>
+<b>NB</b>: Gunakan perintah `date -s "TahunBulanTanggal Jam:Menit"` untuk mengganti tanggal pada UML.
 
 #### NOMOR 5
 Akses dari subnet GRESIK hanya diperbolehkan pada pukul 17.00 hingga pukul 07.00 setiap harinya, Selain itu di <b>reject</b>.<br>
@@ -182,6 +189,7 @@ iptables -A INPUT -s 192.168.0.0/24 -m time --timestart 07:01 --timestop 16:59 -
 ```
 <img width="412" alt="no5" src="https://user-images.githubusercontent.com/26424136/103148193-c1aa7000-478f-11eb-8af6-3635e2022db4.PNG"> <br>
 ##### Testing
+Melakukan test dengan netcat dari GRESIK ke MALANG pada waktu yang tidak diperbolehkan dan hasilnya gagal.
 <img width="728" alt="test5 (2)" src="https://user-images.githubusercontent.com/26424136/103148205-d424a980-478f-11eb-8f4e-981d25c89f69.png">
 
 #### NOMOR 6
@@ -192,6 +200,7 @@ iptables -A PREROUTING -t nat -p tcp -d 10.151.73.178 -j DNAT --to-destination 1
 ```
 <img width="370" alt="no6" src="https://user-images.githubusercontent.com/26424136/103148194-c2430680-478f-11eb-8225-244475250142.PNG"> <br>
 ##### Testing
+Mengirim suatu text melalui port 80 dari luar (putty) ke dalam topologi (Malang), dimana saat mengakses DNS Server akan didistribusikan secara bergantian ke PROBOLINGGO dan MADIUN.
 ![test6](https://user-images.githubusercontent.com/26424136/103219878-7049de80-4951-11eb-9937-dbfc24c3ea10.png)
 
 #### NOMOR 7
@@ -212,6 +221,9 @@ iptables -A LOGGING -j DROP
 ```
 <img width="731" alt="no7(2)" src="https://user-images.githubusercontent.com/26424136/103218925-ebf65c00-494e-11eb-9d55-e5fd73846cd1.PNG"> <br>
 ##### Testing
+- Hasil log saat menjalankan perintah nomor 3 pada UML MALANG
 ![test7mlg](https://user-images.githubusercontent.com/26424136/103219885-72ac3880-4951-11eb-9ed4-1c0296e6468d.png)
+- Hasil log saat menjalankan perintah nomor 3 pada UML MOJOKERTO
 ![test7mojo](https://user-images.githubusercontent.com/26424136/103219889-7475fc00-4951-11eb-945f-b0a353b58f21.png)
+- Hasil log saat menjalankan perintah nomor 2
 ![test7sby](https://user-images.githubusercontent.com/26424136/103219890-763fbf80-4951-11eb-9bdc-55249a1eab59.png)
