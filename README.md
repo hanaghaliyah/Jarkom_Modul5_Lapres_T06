@@ -108,14 +108,19 @@ WEB SERVER MADIUN <br>
 <img width="370" alt="dhcpconf1" src="https://user-images.githubusercontent.com/26424136/103148185-bce5bc00-478f-11eb-8a09-48acd27410da.PNG">
 <img width="366" alt="dhcpconf2" src="https://user-images.githubusercontent.com/26424136/103148187-beaf7f80-478f-11eb-8f05-2114794e9e28.PNG">
 <br>
-7. Agar DHCP Request dari Client SIDOARJO dan Client GRESIK dapat diteruskan ke DHCP Server MOJOKERTO, maka kita memerlukan DHCP Relay di ketiga router yaitu SURABAYA, KEDIRI dan BATU. Lakukan setting pada server dan interfaces dimana akan membantu DHCP Request agar dapat diteruskan dengan baik ke DHCP Server pada file `nano /etc/default/isc-dhcp-relay`
-- DHCP Relay SURABAYA <br>
+7. Agar DHCP Request dari Client SIDOARJO dan Client GRESIK dapat diteruskan ke DHCP Server MOJOKERTO, maka kita memerlukan DHCP Relay di ketiga router yaitu SURABAYA, KEDIRI dan BATU. Lakukan setting pada server dan interfaces dimana akan membantu DHCP Request agar dapat diteruskan dengan baik ke DHCP Server pada file `nano /etc/default/isc-dhcp-relay` <br>
+DHCP Relay SURABAYA <br>
 <img width="371" alt="relaysby" src="https://user-images.githubusercontent.com/26424136/103148611-3089c800-4794-11eb-9081-c525527f5bfc.PNG">
-- DHCP Relay BATU <br>
+DHCP Relay BATU <br>
 <img width="370" alt="relaybatu" src="https://user-images.githubusercontent.com/26424136/103148606-2ec00480-4794-11eb-8c44-94f1047bf0f7.PNG"> 
-- DHCP Relay KEDIRI <br>
+DHCP Relay KEDIRI <br>
 <img width="370" alt="relaykediri" src="https://user-images.githubusercontent.com/26424136/103148609-2ff13180-4794-11eb-90bf-509a83cea13d.PNG">
 8. DHCP Server
+Interface dari server MOJOKERTO yang menuju ke client GRESIK dan SIDOARJO adalah <b>eth0</b>, maka kita akan memilih interface <b>eth0</b> untuk diberikan layanan DHCP.
+Buka file konfigurasi interface dengan perintah `nano /etc/default/isc-dhcp-server`
+```
+INTERFACES="eth0"
+```
 <img width="369" alt="dhcp server (2)" src="https://user-images.githubusercontent.com/26424136/103210086-3c61bf80-4937-11eb-950d-a785c001f0ef.PNG">
 
 
