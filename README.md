@@ -122,7 +122,8 @@ Buka file konfigurasi interface dengan perintah `nano /etc/default/isc-dhcp-serv
 INTERFACES="eth0"
 ```
 <img width="369" alt="dhcp server (2)" src="https://user-images.githubusercontent.com/26424136/103210086-3c61bf80-4937-11eb-950d-a785c001f0ef.PNG">
-
+9. Buat file `bye.sh`
+![bye](https://user-images.githubusercontent.com/26424136/103220026-ce76c180-4951-11eb-9c3b-dbf44da46a14.png)
 
 #### NOMOR 1
 Membuat file `nomor1.sh` UML SURABAYA yang berisikan script sebagai berikut: 
@@ -168,9 +169,10 @@ iptables -A INPUT -s 192.168.2.0/24 -m time --timestart 00:00 --timestop 06:59 -
 iptables -A INPUT -s 192.168.2.0/24 -m time --timestart 17:01 --timestop 23:59 --weekdays Mon,Tue,Wed,Thu,Fri -j REJECT
 iptables -A INPUT -s 192.168.2.0/24 -m time --weekdays Sat,Sun -j REJECT
 ```
-<img width="366" alt="no4" src="https://user-images.githubusercontent.com/26424136/103148192-c111d980-478f-11eb-999e-32c038dbee9b.PNG"> <br>
+<img width="371" alt="no4" src="https://user-images.githubusercontent.com/26424136/103217880-4641ed80-494c-11eb-8f85-7ea0ffbde7aa.PNG"> <br>
 ##### Testing
 <img width="729" alt="test4 (2)" src="https://user-images.githubusercontent.com/26424136/103148203-cf5ff580-478f-11eb-8087-3392ba0835c0.png">
+<img width="730" alt="test4 (3)" src="https://user-images.githubusercontent.com/26424136/103218179-f44d9780-494c-11eb-97cf-dd3da211885e.png">
 
 #### NOMOR 5
 Akses dari subnet GRESIK hanya diperbolehkan pada pukul 17.00 hingga pukul 07.00 setiap harinya, Selain itu di <b>reject</b>.<br>
@@ -190,6 +192,7 @@ iptables -A PREROUTING -t nat -p tcp -d 10.151.73.178 -j DNAT --to-destination 1
 ```
 <img width="370" alt="no6" src="https://user-images.githubusercontent.com/26424136/103148194-c2430680-478f-11eb-8225-244475250142.PNG"> <br>
 ##### Testing
+![test6](https://user-images.githubusercontent.com/26424136/103219878-7049de80-4951-11eb-9937-dbfc24c3ea10.png)
 
 #### NOMOR 7
 Membuat file `nomor7.sh` pada UML SURABAYA yang berisikan script LOGGING sebagai berikut:
@@ -199,7 +202,7 @@ iptables -A FORWARD -d 10.151.73.176/29 -i eth0 -p tcp -m tcp --dport 22 -j LOGG
 iptables -A LOGGING -m limit --limit 2/min -j LOG --log-prefix "IPTables-Dropped: " --log-level 4
 iptables -A LOGGING -j DROP
 ```
-<img width="367" alt="no7(1)" src="https://user-images.githubusercontent.com/26424136/103209793-81d1bd00-4936-11eb-8d5f-270cb6946460.PNG"> <br>
+<img width="367" alt="no7(1)" src="https://user-images.githubusercontent.com/26424136/103218919-e9940200-494e-11eb-8a85-b96ec04e4fd6.PNG"> <br>
 Membuat file `nomor7.sh` pada UML MALANG dan MOJOKERTO yang berisikan script LOGGING sebagai berikut:
 ```
 iptables -N LOGGING
@@ -207,5 +210,8 @@ iptables -A INPUT -p icmp -m connlimit --connlimit-above 3 --connlimit-mask 0 -j
 iptables -A LOGGING -m limit --limit 2/min -j LOG --log-prefix "IPTables-Dropped: " --log-level 4
 iptables -A LOGGING -j DROP
 ```
-<img width="732" alt="no7(2)" src="https://user-images.githubusercontent.com/26424136/103209315-64502380-4935-11eb-9db7-4475bb854d91.PNG">  <br>
+<img width="731" alt="no7(2)" src="https://user-images.githubusercontent.com/26424136/103218925-ebf65c00-494e-11eb-9d55-e5fd73846cd1.PNG"> <br>
 ##### Testing
+![test7mlg](https://user-images.githubusercontent.com/26424136/103219885-72ac3880-4951-11eb-9ed4-1c0296e6468d.png)
+![test7mojo](https://user-images.githubusercontent.com/26424136/103219889-7475fc00-4951-11eb-945f-b0a353b58f21.png)
+![test7sby](https://user-images.githubusercontent.com/26424136/103219890-763fbf80-4951-11eb-9bdc-55249a1eab59.png)
