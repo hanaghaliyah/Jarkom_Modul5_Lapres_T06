@@ -153,7 +153,7 @@ c. DHCP Relay KEDIRI <br>
 
 9. Terakhir, membuat script dengan nama file `bye.sh` supaya mempermudah serta mempercepat untuk mematikan setiap UML.
 ![bye](https://user-images.githubusercontent.com/26424136/103220026-ce76c180-4951-11eb-9c3b-dbf44da46a14.png)
-<br>
+
 #### NOMOR 1
 Membuat file `nomor1.sh` UML SURABAYA yang berisikan script sebagai berikut: 
 ```
