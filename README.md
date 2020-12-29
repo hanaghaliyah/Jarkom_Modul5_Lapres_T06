@@ -104,6 +104,7 @@ apt-get update
 apt-get install apache2
 ```
 <b>NB:</b> jika muncul tulisan "Do you want to continue? [Y/n]" input Y lalu tekan enter. <br>
+<br>
 <b>Screenshot</b> <br>
 WEB SERVER PROBOLINGGO <br>
 ![web server probolinggo](https://user-images.githubusercontent.com/61286109/103164757-bc0d6280-4841-11eb-9a3d-82902ef82032.PNG) <br>
