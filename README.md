@@ -80,48 +80,76 @@ Hasil yang didapat adalah <b>Netmask /21</b> untuk subnet besar topologi diatas.
 ![routing surabaya](https://user-images.githubusercontent.com/61286109/102912675-47889b80-44b0-11eb-9f89-5b2f4a1d4440.PNG) <br>
 - ROUTING KEDIRI <br>
 ![routing kediri](https://user-images.githubusercontent.com/61286109/102912665-45bed800-44b0-11eb-9509-163626b42c1c.PNG) <br>
-
-5. Install DHCP server, DHCP Relay, DNS server dan Web server
-Jalankan perintah `apt-get update` sebelum menginstall pada UML
-- MALANG (DNS Server) <br>
-Gunakan command `apt-get install bind9 -y` untuk menginstall Bind9 <br>
+5. DNS SERVER
+DNS Server berfungsi menerjemahkan nama domain menjadi alamat IP. DNS dibuat guna untuk menggantikan sistem penggunaan file host yang dirasa tidak efisien.
+- Lakukan update package lists pada UML MALANG dengan menjalankan command:
+```
+apt-get update
+```
+- Setalah melakukan update silahkan install aplikasi bind9 pada MALANG dengan perintah:
+```
+ apt-get install bind9 -y
+```
 <img width="364" alt="dns server" src="https://user-images.githubusercontent.com/26424136/102977306-63825080-4535-11eb-9e09-a4fd4849cc57.PNG"> <br>
-- MOJOKERTO (DHCP Server) <br>
-Gunakan command `apt-get install isc-dhcp-server` untuk menginstall DHCP Server <br>
-<img width="369" alt="dhcp server" src="https://user-images.githubusercontent.com/26424136/102977301-61b88d00-4535-11eb-903e-588d5cc6c906.PNG"> <br>
-- SURABAYA, BATU dan KEDIRI (DHCP Relay) <br>
-Gunakan command `apt-get install isc-dhcp-relay` untuk menginstall DHCP Relay <br>
-DHCP RELAY SURABAYA <br>
-![relay surabaya](https://user-images.githubusercontent.com/61286109/103164621-4d7bd500-4840-11eb-9530-7a40f61e0276.PNG) <br>
-DHCP RELAY BATU <br>
-![relay batu](https://user-images.githubusercontent.com/61286109/103164623-4f459880-4840-11eb-9ee7-aa9a48f1528c.PNG) <br>
-DHCP RELAY KEDIRI <br>
-![relay kediri](https://user-images.githubusercontent.com/61286109/103164624-4fde2f00-4840-11eb-8df5-9f99771015b8.PNG) <br>
-- MADIUN dan PROBOLINGGO (Web Server) <br>
-Gunakan command `apt-get install apache2` untuk menginstall Web Server Apache <br>
+6. WEB SERVER
+Web server berarti sebuah storage yang digunakan untuk menyimpan semua data dari aplikasi web.
+- Lakukan update package lists pada UML PROBOLINGGO dan MADIUN dengan menjalankan command:
+```
+apt-get update
+```
+- Setalah melakukan update silahkan install `apache` pada PROBOLINGGO dan MADIUN dengan perintah:
+```
+apt-get install apache2
+```
+<b>NB:</b> jika muncul tulisan "Do you want to continue? [Y/n]" input Y lalu tekan enter. <br>
 WEB SERVER PROBOLINGGO <br>
 ![web server probolinggo](https://user-images.githubusercontent.com/61286109/103164757-bc0d6280-4841-11eb-9a3d-82902ef82032.PNG) <br>
 WEB SERVER MADIUN <br>
 ![web server madiun](https://user-images.githubusercontent.com/61286109/103164756-ba439f00-4841-11eb-836b-1eb0b62ecc04.PNG) <br>
 
-6. Agar MOJOKERTO (DHCP Server) dapat berjalan dengan lancar, maka kita perlu melakukan deklarasi subnet yang terkoneksi pada MOJOKERTO yang diatur di `etc/dhcp/dhcpd.conf`. Terdapat subnet S2, A1 dan A4. <br>
-<img width="370" alt="dhcpconf1" src="https://user-images.githubusercontent.com/26424136/103148185-bce5bc00-478f-11eb-8a09-48acd27410da.PNG"> <br>
-<img width="366" alt="dhcpconf2" src="https://user-images.githubusercontent.com/26424136/103148187-beaf7f80-478f-11eb-8f05-2114794e9e28.PNG"> <br>
-7. Agar DHCP Request dari Client SIDOARJO dan Client GRESIK dapat diteruskan ke DHCP Server MOJOKERTO, maka kita memerlukan DHCP Relay di ketiga router yaitu SURABAYA, KEDIRI dan BATU. Lakukan setting pada server dan interfaces dimana akan membantu DHCP Request agar dapat diteruskan dengan baik ke DHCP Server pada file `nano /etc/default/isc-dhcp-relay`<br>
-DHCP Relay SURABAYA <br>
-<img width="371" alt="relaysby" src="https://user-images.githubusercontent.com/26424136/103148611-3089c800-4794-11eb-9081-c525527f5bfc.PNG"> <br>
-DHCP Relay BATU <br>
-<img width="370" alt="relaybatu" src="https://user-images.githubusercontent.com/26424136/103148606-2ec00480-4794-11eb-8c44-94f1047bf0f7.PNG"> <br>
-DHCP Relay KEDIRI <br>
-<img width="370" alt="relaykediri" src="https://user-images.githubusercontent.com/26424136/103148609-2ff13180-4794-11eb-90bf-509a83cea13d.PNG"> <br>
-8. DHCP Server
-Interface dari server MOJOKERTO yang menuju ke client GRESIK dan SIDOARJO adalah <b>eth0</b>, maka kita akan memilih interface <b>eth0</b> untuk diberikan layanan DHCP.
+7. DHCP SERVER <br>
+Digunakan untuk memudahkan pengalokasian alamat IP dalam satu jaringan. DHCP secara otomatis akan meminjamkan alamat IP kepada host yang memintanya. Dengan menggunakan bantuan DHCP Server, subnet SIDOARJO dan GRESIK mendapatkan ip secara dinamis
+menggunakan bantuan DHCP SERVER
+- Lakukan update package lists pada UML MOJOKERTO dengan menjalankan command:
+```
+apt-get update
+```
+- Kemudian install DHCP Server dengan menggunakan command: <br>
+```
+apt-get install isc-dhcp-server
+```
+<img width="369" alt="dhcp server" src="https://user-images.githubusercontent.com/26424136/102977301-61b88d00-4535-11eb-903e-588d5cc6c906.PNG"> <br>
+- Interface dari server MOJOKERTO yang menuju ke client GRESIK dan SIDOARJO adalah <b>eth0</b>, maka kita akan memilih interface <b>eth0</b> untuk diberikan layanan DHCP.
 Buka file konfigurasi interface dengan perintah `nano /etc/default/isc-dhcp-server`
 ```
 INTERFACES="eth0"
 ```
 <img width="369" alt="dhcp server (2)" src="https://user-images.githubusercontent.com/26424136/103210086-3c61bf80-4937-11eb-950d-a785c001f0ef.PNG"> <br>
-9. Buat file `bye.sh`
+- Agar MOJOKERTO (DHCP Server) dapat berjalan dengan lancar, maka kita perlu melakukan deklarasi subnet yang terkoneksi pada MOJOKERTO yang diatur di `etc/dhcp/dhcpd.conf`. Dimana terdapat subnet S2, A1 dan A4. <br>
+<img width="370" alt="dhcpconf1" src="https://user-images.githubusercontent.com/26424136/103148185-bce5bc00-478f-11eb-8a09-48acd27410da.PNG"> <br>
+<img width="366" alt="dhcpconf2" src="https://user-images.githubusercontent.com/26424136/103148187-beaf7f80-478f-11eb-8f05-2114794e9e28.PNG"> <br>
+
+8. DHCP RELAY
+Agar Request dari client (SIDOARJO dan GRESIK) dapat diteruskan ke DHCP Server (MOJOKERTO), maka kita perlu menyetting DHCP RELAY pada router yang menghubungkannya yaitu SURABAYA, BATU dan SURABAYA.
+- Lakukan update terlebih dahulu, kemudian install `dhcp relay` dengan perintah:
+```
+apt-get install isc-dhcp-relay
+```
+a. DHCP RELAY SURABAYA <br>
+![relay surabaya](https://user-images.githubusercontent.com/61286109/103164621-4d7bd500-4840-11eb-9530-7a40f61e0276.PNG) <br>
+b. DHCP RELAY BATU <br>
+![relay batu](https://user-images.githubusercontent.com/61286109/103164623-4f459880-4840-11eb-9ee7-aa9a48f1528c.PNG) <br>
+c. DHCP RELAY KEDIRI <br>
+![relay kediri](https://user-images.githubusercontent.com/61286109/103164624-4fde2f00-4840-11eb-8df5-9f99771015b8.PNG) <br>
+- Lakukan setting pada server dan interfaces dimana akan membantu DHCP Request agar dapat diteruskan dengan baik ke DHCP Server pada file `nano /etc/default/isc-dhcp-relay`<br>
+a. DHCP Relay SURABAYA <br>
+<img width="371" alt="relaysby" src="https://user-images.githubusercontent.com/26424136/103148611-3089c800-4794-11eb-9081-c525527f5bfc.PNG"> <br>
+b. DHCP Relay BATU <br>
+<img width="370" alt="relaybatu" src="https://user-images.githubusercontent.com/26424136/103148606-2ec00480-4794-11eb-8c44-94f1047bf0f7.PNG"> <br>
+c. DHCP Relay KEDIRI <br>
+<img width="370" alt="relaykediri" src="https://user-images.githubusercontent.com/26424136/103148609-2ff13180-4794-11eb-90bf-509a83cea13d.PNG"> <br>
+
+9. Terakhir, membuat script dengan nama file `bye.sh` supaya mempermudah serta mempercepat untuk mematikan setiap UML.
 ![bye](https://user-images.githubusercontent.com/26424136/103220026-ce76c180-4951-11eb-9c3b-dbf44da46a14.png)
 
 #### NOMOR 1
