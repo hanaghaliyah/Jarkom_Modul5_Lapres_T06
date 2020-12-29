@@ -150,7 +150,7 @@ b. DHCP Relay BATU <br>
 <img width="370" alt="relaybatu" src="https://user-images.githubusercontent.com/26424136/103148606-2ec00480-4794-11eb-8c44-94f1047bf0f7.PNG"> <br>
 c. DHCP Relay KEDIRI <br>
 <img width="370" alt="relaykediri" src="https://user-images.githubusercontent.com/26424136/103148609-2ff13180-4794-11eb-90bf-509a83cea13d.PNG"> <br>
-<br>
+
 9. Terakhir, membuat script dengan nama file `bye.sh` supaya mempermudah serta mempercepat untuk mematikan setiap UML.
 ![bye](https://user-images.githubusercontent.com/26424136/103220026-ce76c180-4951-11eb-9c3b-dbf44da46a14.png)
 <br>
