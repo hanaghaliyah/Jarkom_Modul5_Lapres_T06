@@ -80,7 +80,7 @@ Hasil yang didapat adalah <b>Netmask /21</b> untuk subnet besar topologi diatas.
 ![routing surabaya](https://user-images.githubusercontent.com/61286109/102912675-47889b80-44b0-11eb-9f89-5b2f4a1d4440.PNG) <br>
 - ROUTING KEDIRI <br>
 ![routing kediri](https://user-images.githubusercontent.com/61286109/102912665-45bed800-44b0-11eb-9509-163626b42c1c.PNG) <br>
-<br>
+
 5. DNS SERVER <br>
 DNS Server berfungsi menerjemahkan nama domain menjadi alamat IP. DNS dibuat guna untuk menggantikan sistem penggunaan file host yang dirasa tidak efisien.
 - Lakukan update package lists pada UML MALANG dengan menjalankan command:
@@ -92,7 +92,7 @@ apt-get update
  apt-get install bind9 -y
 ```
 <img width="364" alt="dns server" src="https://user-images.githubusercontent.com/26424136/102977306-63825080-4535-11eb-9e09-a4fd4849cc57.PNG"> <br>
-<br>
+
 6. WEB SERVER <br>
 Web server berarti sebuah storage yang digunakan untuk menyimpan semua data dari aplikasi web.
 - Lakukan update package lists pada UML PROBOLINGGO dan MADIUN dengan menjalankan command:
@@ -108,7 +108,7 @@ WEB SERVER PROBOLINGGO <br>
 ![web server probolinggo](https://user-images.githubusercontent.com/61286109/103164757-bc0d6280-4841-11eb-9a3d-82902ef82032.PNG) <br>
 WEB SERVER MADIUN <br>
 ![web server madiun](https://user-images.githubusercontent.com/61286109/103164756-ba439f00-4841-11eb-836b-1eb0b62ecc04.PNG) <br>
-<br>
+
 7. DHCP SERVER <br>
 Digunakan untuk memudahkan pengalokasian alamat IP dalam satu jaringan. DHCP secara otomatis akan meminjamkan alamat IP kepada host yang memintanya. Dengan menggunakan bantuan DHCP Server, subnet SIDOARJO dan GRESIK mendapatkan ip secara dinamis
 menggunakan bantuan DHCP SERVER
@@ -130,7 +130,7 @@ INTERFACES="eth0"
 - Agar MOJOKERTO (DHCP Server) dapat berjalan dengan lancar, maka kita perlu melakukan deklarasi subnet yang terkoneksi pada MOJOKERTO yang diatur di `etc/dhcp/dhcpd.conf`. Dimana terdapat subnet S2, A1 dan A4. <br>
 <img width="370" alt="dhcpconf1" src="https://user-images.githubusercontent.com/26424136/103148185-bce5bc00-478f-11eb-8a09-48acd27410da.PNG"> <br>
 <img width="366" alt="dhcpconf2" src="https://user-images.githubusercontent.com/26424136/103148187-beaf7f80-478f-11eb-8f05-2114794e9e28.PNG"> <br>
-<br>
+
 8. DHCP RELAY <br>
 Agar Request dari client (SIDOARJO dan GRESIK) dapat diteruskan ke DHCP Server (MOJOKERTO), maka kita perlu menyetting DHCP RELAY pada router yang menghubungkannya yaitu SURABAYA, BATU dan SURABAYA.
 - Lakukan update terlebih dahulu, kemudian install `dhcp relay` dengan perintah:
