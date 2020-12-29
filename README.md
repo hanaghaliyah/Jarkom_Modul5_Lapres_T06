@@ -207,7 +207,7 @@ iptables -A INPUT -s 192.168.2.0/24 -m time --weekdays Sat,Sun -j REJECT
 - Melakukan test dengan netcat dari SIDOARJO ke MALANG pada waktu yang tidak diperbolehkan dan hasilnya gagal. <br>
 <img width="729" alt="test4 (2)" src="https://user-images.githubusercontent.com/26424136/103148203-cf5ff580-478f-11eb-8087-3392ba0835c0.png"> <br>
 - Melakukan ping dari SIDOARJO ke MALANG pada waktu yang tidak diperbolehkan dan hasilnya gagal. <br>
-<img width="730" alt="test4 (3)" src="https://user-images.githubusercontent.com/26424136/103218179-f44d9780-494c-11eb-97cf-dd3da211885e.png">
+<img width="730" alt="test4 (3)" src="https://user-images.githubusercontent.com/26424136/103218179-f44d9780-494c-11eb-97cf-dd3da211885e.png"> <br>
 <b>NB</b>: Gunakan perintah `date -s "TahunBulanTanggal Jam:Menit"` untuk mengganti tanggal pada UML.
 
 #### NOMOR 5
