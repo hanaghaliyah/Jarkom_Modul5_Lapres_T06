@@ -80,7 +80,7 @@ Hasil yang didapat adalah <b>Netmask /21</b> untuk subnet besar topologi diatas.
 ![routing surabaya](https://user-images.githubusercontent.com/61286109/102912675-47889b80-44b0-11eb-9f89-5b2f4a1d4440.PNG) <br>
 - ROUTING KEDIRI <br>
 ![routing kediri](https://user-images.githubusercontent.com/61286109/102912665-45bed800-44b0-11eb-9509-163626b42c1c.PNG) <br>
-5. DNS SERVER
+5. DNS SERVER <br>
 DNS Server berfungsi menerjemahkan nama domain menjadi alamat IP. DNS dibuat guna untuk menggantikan sistem penggunaan file host yang dirasa tidak efisien.
 - Lakukan update package lists pada UML MALANG dengan menjalankan command:
 ```
@@ -91,7 +91,7 @@ apt-get update
  apt-get install bind9 -y
 ```
 <img width="364" alt="dns server" src="https://user-images.githubusercontent.com/26424136/102977306-63825080-4535-11eb-9e09-a4fd4849cc57.PNG"> <br>
-6. WEB SERVER
+6. WEB SERVER <br>
 Web server berarti sebuah storage yang digunakan untuk menyimpan semua data dari aplikasi web.
 - Lakukan update package lists pada UML PROBOLINGGO dan MADIUN dengan menjalankan command:
 ```
@@ -129,7 +129,7 @@ INTERFACES="eth0"
 <img width="370" alt="dhcpconf1" src="https://user-images.githubusercontent.com/26424136/103148185-bce5bc00-478f-11eb-8a09-48acd27410da.PNG"> <br>
 <img width="366" alt="dhcpconf2" src="https://user-images.githubusercontent.com/26424136/103148187-beaf7f80-478f-11eb-8f05-2114794e9e28.PNG"> <br>
 
-8. DHCP RELAY
+8. DHCP RELAY <br>
 Agar Request dari client (SIDOARJO dan GRESIK) dapat diteruskan ke DHCP Server (MOJOKERTO), maka kita perlu menyetting DHCP RELAY pada router yang menghubungkannya yaitu SURABAYA, BATU dan SURABAYA.
 - Lakukan update terlebih dahulu, kemudian install `dhcp relay` dengan perintah:
 ```
